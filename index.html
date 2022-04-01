@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AE PLAY</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <img src="./img/logo-ae-play.png" alt="" class="logo">
+    <h1>AE PLAY DEMO</h1>
+</header>
+
+<div class="banner"><img src="./img/banner.png" alt=""></div>
+<div class="demo-list"></div>
+<div class="demo-block"></div>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $.getJSON("demos.json", function(data){
+        for (var i = 0; i < data.demos.length; i++) {
+            var item = $('<div class="game"><img src="./img/covers/' 
+                + data.demos[i].gameID + 
+                '.png"><h3>' 
+                + data.demos[i].gameName + 
+                '</h3></div>');
+            $('.demo-list').append(item);
+            $(item).click(function(){
+                var gamenameurl = data.demos[$(this).index()].gameName.replace(/ /g,"_");
+                $('.demo-block').show().html('<div class="close">྾</div><iframe src="https://demo.evoplay.games/demo/fullstate/html5/evoplay/' + gamenameurl + '"/>');
+                $('.demo-block .close').click(function(){
+                    $('.demo-block').hide().html('');
+                });
+            });
+        }
+    }).fail(function(){
+        console.log("ERROR");
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+
+{
+"demos":[
+    {
+        "gameID": 85,
+        "gameName": "Ace Round"
+    },
+    {
+        "gameID": 725,
+        "gameName": "Aeronauts"
+    },
+    {
+        "gameID": 5547,
+        "gameName": "Animal Quest"
+    },
+    {
+        "gameID": 5789,
+        "gameName": "Anubis Moon"
+    },
+    {
+        "gameID": 98,
+        "gameName": "Atlantis"
+    },
+    {
+        "gameID": 10,
+        "gameName": "Basketball"
+    },
+    {
+        "gameID": 736,
+        "gameName": "Battle Tanks"
+    },
+    {
+        "gameID": 5774,
+        "gameName": "Bloody Brilliant"
+    },
+    {
+        "gameID": 5493,
+        "gameName": "Book of Rest"
+    },
+    {
+        "gameID": 5479,
+        "gameName": "Brutal Santa"
+    },
+    {
+        "gameID": 5855,
+        "gameName": "Budai Reels Bonus Buy"
+    },
+    {
+        "gameID": 5847,
+        "gameName": "Budai Reels"
+    },
+    {
+        "gameID": 296,
+        "gameName": "Candy Dreams"
+    },
+    {
+        "gameID": 979,
+        "gameName": "Charming Queens"
+    },
+    {
+        "gameID": 22,
+        "gameName": "Chinese New Year"
+    },
+    {
+        "gameID": 5833,
+        "gameName": "Christmas Reach Bonus Buy"
+    },
+    {
+        "gameID": 5815,
+        "gameName": "Christmas Reach"
+    },
+    {
+        "gameID": 25,
+        "gameName": "Clash of Pirates"
+    },
+    {
+        "gameID": 5805,
+        "gameName": "Curse of the Pharaoh Bonus Buy"
+    },
+    {
+        "gameID": 5799,
+        "gameName": "Curse of the Pharaoh"
+    },
+    {
+        "gameID": 5782,
+        "gameName": "Cycle of Luck Bonus Buy"
+    },
+    {
+        "gameID": 5766,
+        "gameName": "Cycle of Luck"
+    },
+    {
+        "gameID": 742,
+        "gameName": "Dolphins Treasure"
+    },
+    {
+        "gameID": 5845,
+        "gameName": "Dragon's Tavern Bonus Buy"
+    },
+    {
+        "gameID": 5829,
+        "gameName": "Dragon's Tavern"
+    },
+    {
+        "gameID": 4,
+        "gameName": "Egypt Gods"
+    },
+    {
+        "gameID": 5758,
+        "gameName": "Ellen's Fortune"
+    },
+    {
+        "gameID": 82,
+        "gameName": "Elven Princesses"
+    },
+    {
+        "gameID": 101,
+        "gameName": "Epic Gladiators"
+    },
+    {
+        "gameID": 5762,
+        "gameName": "Epic Legends"
+    },
+    {
+        "gameID": 994,
+        "gameName": "E.T. Lost Socks"
+    },
+    {
+        "gameID": 5659,
+        "gameName": "Exploding Fruits"
+    },
+    {
+        "gameID": 5641,
+        "gameName": "Fluffy Rangers"
+    },
+    {
+        "gameID": 5760,
+        "gameName": "Food Feast"
+    },
+    {
+        "gameID": 107,
+        "gameName": "Football"
+    },
+    {
+        "gameID": 5721,
+        "gameName": "Forest Dreams"
+    },
+    {
+        "gameID": 5727,
+        "gameName": "Forgotten Fable"
+    },
+    {
+        "gameID": 88,
+        "gameName": "Fruit Burst"
+    },
+    {
+        "gameID": 5791,
+        "gameName": "Fruit Disco"
+    },
+    {
+        "gameID": 5741,
+        "gameName": "Fruit Nova"
+    },
+    {
+        "gameID": 976,
+        "gameName": "Fruits Land"
+    },
+    {
+        "gameID": 5797,
+        "gameName": "Fruit Super Nova 100"
+    },
+    {
+        "gameID": 5793,
+        "gameName": "Fruit Super Nova 30"
+    },
+    {
+        "gameID": 5775,
+        "gameName": "Fruit Super Nova 40"
+    },
+    {
+        "gameID": 5795,
+        "gameName": "Fruit Super Nova 60"
+    },
+    {
+        "gameID": 5823,
+        "gameName": "Fruit Super Nova 80"
+    },
+    {
+        "gameID": 5752,
+        "gameName": "Fruit Super Nova"
+    },
+    {
+        "gameID": 5771,
+        "gameName": "Gangster Night"
+    },
+    {
+        "gameID": 5787,
+        "gameName": "Gold of Sirens Bonus Buy"
+    },
+    {
+        "gameID": 5773,
+        "gameName": "Gold of Sirens"
+    },
+    {
+        "gameID": 5813,
+        "gameName": "Hot Triple Sevens Special"
+    },
+    {
+        "gameID": 5517,
+        "gameName": "Hot Triple Sevens"
+    },
+    {
+        "gameID": 5487,
+        "gameName": "Hungry Night"
+    },
+    {
+        "gameID": 5740,
+        "gameName": "Ice Mania"
+    },
+    {
+        "gameID": 79,
+        "gameName": "Indiana's Quest"
+    },
+    {
+        "gameID": 5551,
+        "gameName": "Irish Reels"
+    },
+    {
+        "gameID": 5695,
+        "gameName": "Jelly Boom"
+    },
+    {
+        "gameID": 37,
+        "gameName": "Jewellery store"
+    },
+    {
+        "gameID": 5735,
+        "gameName": "Jolly Treasures"
+    },
+    {
+        "gameID": 28,
+        "gameName": "Journey to the West"
+    },
+    {
+        "gameID": 5485,
+        "gameName": "Legend of Kaan"
+    },
+    {
+        "gameID": 94,
+        "gameName": "Legend of Ra"
+    },
+    {
+        "gameID": 988,
+        "gameName": "Lucky Girls"
+    },
+    {
+        "gameID": 7,
+        "gameName": "Lucky Mahjong Box"
+    },
+    {
+        "gameID": 5483,
+        "gameName": "Maze: Desire for Power"
+    },
+    {
+        "gameID": 5653,
+        "gameName": "Midnight Show"
+    },
+    {
+        "gameID": 730,
+        "gameName": "Monster Lab"
+    },
+    {
+        "gameID": 973,
+        "gameName": "Mystery Planet"
+    },
+    {
+        "gameID": 104,
+        "gameName": "Naughty Girls Cabaret"
+    },
+    {
+        "gameID": 5737,
+        "gameName": "Night Of The Living Tales"
+    },
+    {
+        "gameID": 5398,
+        "gameName": "Nuke World"
+    },
+    {
+        "gameID": 728,
+        "gameName": "Prohibition"
+    },
+    {
+        "gameID": 5717,
+        "gameName": "Raccoon Tales"
+    },
+    {
+        "gameID": 76,
+        "gameName": "Red Cliff"
+    },
+    {
+        "gameID": 1018,
+        "gameName": "Reign Of Dragons"
+    },
+    {
+        "gameID": 5549,
+        "gameName": "Rich Reels"
+    },
+    {
+        "gameID": 5569,
+        "gameName": "Rise of Horus"
+    },
+    {
+        "gameID": 19,
+        "gameName": "Robin Hood"
+    },
+    {
+        "gameID": 293,
+        "gameName": "Robinson"
+    },
+    {
+        "gameID": 982,
+        "gameName": "Robots: Energy Conflict"
+    },
+    {
+        "gameID": 5593,
+        "gameName": "Rocket Stars"
+    },
+    {
+        "gameID": 5755,
+        "gameName": "Runes Of Destiny"
+    },
+    {
+        "gameID": 5527,
+        "gameName": "Season Sisters"
+    },
+    {
+        "gameID": 5778,
+        "gameName": "Shadow of Luxor"
+    },
+    {
+        "gameID": 110,
+        "gameName": "Sindbad"
+    },
+    {
+        "gameID": 5677,
+        "gameName": "Surf Zone"
+    },
+    {
+        "gameID": 5763,
+        "gameName": "Sweet Sugar"
+    },
+    {
+        "gameID": 991,
+        "gameName": "Syndicate"
+    },
+    {
+        "gameID": 13,
+        "gameName": "Talismans of Fortune"
+    },
+    {
+        "gameID": 5777,
+        "gameName": "Temple of Dead Bonus Buy"
+    },
+    {
+        "gameID": 5746,
+        "gameName": "Temple of Dead"
+    },
+    {
+        "gameID": 95,
+        "gameName": "The Emperor's Tomb"
+    },
+    {
+        "gameID": 733,
+        "gameName": "The Great Conflict"
+    },
+    {
+        "gameID": 16,
+        "gameName": "The Great Wall Treasure"
+    },
+    {
+        "gameID": 31,
+        "gameName": "The Legend of Shaolin"
+    },
+    {
+        "gameID": 719,
+        "gameName": "The Slavs"
+    },
+    {
+        "gameID": 113,
+        "gameName": "Totem Island"
+    },
+    {
+        "gameID": 5749,
+        "gameName": "Treasure Mania"
+    },
+    {
+        "gameID": 5742,
+        "gameName": "Tree of Light"
+    },
+    {
+        "gameID": 5801,
+        "gameName": "Triple Chili"
+    },
+    {
+        "gameID": 1003,
+        "gameName": "Trip to the Future"
+    },
+    {
+        "gameID": 5759,
+        "gameName": "Unlimited Wishes"
+    },
+    {
+        "gameID": 739,
+        "gameName": "USSR Grocery"
+    },
+    {
+        "gameID": 722,
+        "gameName": "USSR Seventies"
+    },
+    {
+        "gameID": 5738,
+        "gameName": "Valley of Dreams"
+    },
+    {
+        "gameID": 34,
+        "gameName": "Vegas Nights"
+    },
+    {
+        "gameID": 5587,
+        "gameName": "Western Reels"
+    },
+    {
+        "gameID": 5751,
+        "gameName": "Wild Bullets"
+    },
+    {
+        "gameID": 5841,
+        "gameName": "Wild Overlords"
+    }
+]
+}
