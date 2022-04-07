@@ -1,5 +1,6 @@
 $(document).ready(function(){
-    $.getJSON("https://gleaming-torte-2c8957.netlify.app/demos.json", function(data){
+    var demojson = 'https://gleaming-torte-2c8957.netlify.app/demos.json';
+    $.getJSON(demojson, function(data){
         for (var i = 0; i < data.demos.length; i++) {
             var item = $('<div class="game"><img src="./img/covers/' 
                 + data.demos[i].gameID + 
