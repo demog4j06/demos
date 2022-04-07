@@ -2,7 +2,7 @@ var testjson = [
     {
         "gameID": 5870,
         "gameName": "Star Guardians",
-        "demoURL": "http://api-transfer-wallet.8provider.com/Game/getIFrameURLAdvanced?project=5740&version=3&signature=96b89352f2c0cf6fd0e8cde8a1bc5243&user_id=demo&game=5807&settings[language]=en&denomination=1&return_url_info=0"
+        "demoURL": "https://api-transfer-wallet.8provider.com/Game/getIFrameURLAdvanced?project=5740&version=3&signature=96b89352f2c0cf6fd0e8cde8a1bc5243&user_id=demo&game=5807&settings[language]=en&denomination=1&return_url_info=0"
     },
     {
       "gameID": 85,
