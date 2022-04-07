@@ -9,7 +9,7 @@ $(document).ready(function(){
             $('.demo-list').append(item);
             $(item).click(function(){
                 var gamenameurl = data.demos[$(this).index()].gameName.replace(/ |'/g,"").toLowerCase();
-                $('.demo-block').show().html('<div class="close">྾</div><iframe src="https://play.8provider.com/game/fullstate/html5/evoplay/' + gamenameurl + '/?project=5725&user_id=30657361&demo=0&wid=1&s=74de13df31e9337821b5d1fe9067856a"/>');
+                $('.demo-block').show().html('<div class="close">྾</div><iframe src="https://play.8provider.com/game/fullstate/html5/evoplay/' + gamenameurl + '/?project=5725&user_id=30657361&demo=0&wid=1&s=1cda4af0d48d52628d443e3c268a3ba0"/>');
                 $('.demo-block .close').click(function(){
                     $('.demo-block').hide().html('');
                 });
