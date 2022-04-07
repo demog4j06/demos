@@ -1,5 +1,10 @@
 var testjson = [
     {
+        "gameID": 5870,
+        "gameName": "Star Guardians",
+        "demoURL": "http://api-transfer-wallet.8provider.com/Game/getIFrameURLAdvanced?project=5740&version=3&signature=96b89352f2c0cf6fd0e8cde8a1bc5243&user_id=demo&game=5807&settings[language]=en&denomination=1&return_url_info=0"
+    },
+    {
       "gameID": 85,
       "gameName": "Ace Round",
       "demoURL": "https://api-transfer-wallet.8provider.com/Game/getIFrameURLAdvanced?project=5740&version=3&signature=a7246de3c359db0c5132f125e602cf8a&user_id=demo&game=85&settings[language]=en&denomination=1&return_url_info=0"
@@ -549,7 +554,7 @@ var testjson = [
 
 $(document).ready(function(){
     for (var i = 0; i < testjson.length; i++) {
-        var item = $('<div class="game"><img src="./img/covers/' 
+        var item = $('<div class="game"><img src="https://gleaming-torte-2c8957.netlify.app/img/covers/' 
             + testjson[i].gameID + 
             '.png"><h3>' 
             + testjson[i].gameName + 
