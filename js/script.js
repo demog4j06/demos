@@ -1,6 +1,6 @@
 var testjson = [
     {
-        "gameID": 5740,
+        "gameID": 5870,
         "gameName": "Star Guardians",
         "demoURL": "http://api-transfer-wallet.8provider.com/Game/getIFrameURLAdvanced?project=5740&version=3&signature=a7246de3c359db0c5132f125e602cf8a&user_id=demo&game=85&settings[language]=en&settings[https]=1&denomination=1&return_url_info=0"
     },
