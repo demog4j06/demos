@@ -449,7 +449,7 @@ $(document).ready(function(){
     for (var i = 0; i < testjson.length; i++) {
         
         
-        var item = $('<div class="game"><img src="https://gleaming-torte-2c8957.netlify.app/img/covers/' 
+        var item = $('<div class="game"><img src="https://img.stgdevops.site/img/static/game/en-US/AE_PLAY/' 
             + testjson[i].gameID + 
             '.png"><h3>' 
             + testjson[i].gameName + 
