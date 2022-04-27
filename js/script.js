@@ -618,6 +618,14 @@ var testjson = [
     {
       "gameID": 5849,
       "gameName": "Andar Nights"
+    },
+    {
+      "gameID": 5863,
+      "gameName": "Patrick's Magic Field"
+    },
+    {
+      "gameID": 5865,
+      "gameName": "Lucky Card"
     } 
 ]
 
