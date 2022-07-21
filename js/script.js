@@ -637,7 +637,7 @@ $(document).ready(function(){
   for (var i = 0; i < testjson.length; i++) {
       
       
-      var item = $('<div class="game"><img src="https://img.stgdevops.site/img/static/game/en-US/AE_PLAY/' 
+      var item = $('<div class="game"><img src="https://csi.20icipp.com/img/static/game/en-US/AE_PLAY/' 
           + testjson[i].gameID + 
           '.png"><h3>' 
           + testjson[i].gameName + 
