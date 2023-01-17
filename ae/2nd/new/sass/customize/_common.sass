@@ -1,0 +1,453 @@
+// --- section style ---
+.section
+    width: 100%
+    overflow: hidden
+    padding: 32px 0
+    +pad_up
+        padding: 40px 0
+    +laptop_up
+        padding: 64px 0
+    +desktop_hd_up
+        padding: 4% 0
+
+.section-title
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    +laptop_up
+        margin-bottom: 24px
+    > h2
+        font-size: 26px
+        font-weight: bold
+        line-height: 1.4
+        letter-spacing: -1px
+        background-image: linear-gradient(180deg, #fa8b1d 0%, #d22210 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        +pad_up
+            font-size: 32px
+            max-width: 100%
+        +pad_landscape_up
+            font-size: 36px
+        +laptop_up
+            font-size: 40px
+        +desktop_hd_up
+            font-size: 48px
+    &:after, &:before
+        content: ""
+        width: 76px
+        height: 16px
+        flex-shrink: 0
+        background-size: 100% 100%
+        +pad_landscape_up
+            width: 188px
+            height: 20px
+        +laptop_up
+            width: 254px
+            height: 27px
+    &:after
+        background-image: url("../images/mobile/section_title_deco_r.png")
+        margin-left: 8px
+        +pad_landscape_up
+            background-image: url("../images/pc/section_title_deco_r.png")
+            margin-left: 12px
+    &:before
+        background-image: url("../images/mobile/section_title_deco_l.png")
+        margin-right: 8px
+        +pad_landscape_up
+            background-image: url("../images/pc/section_title_deco_l.png")
+            margin-right: 12px
+
+.section-sub-title
+    text-align: center
+    +pad_up
+        text-align: left
+    +laptop_up
+        margin-bottom: 20px
+    h3
+        font-size: 20px
+        font-weight: bold
+        line-height: 1.7
+        background-image: linear-gradient(180deg, rgba(185,120,2,1) 3%, rgba(240,226,137,1) 50%, rgba(186,120,2,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        +pad_landscape_up
+            font-size: 24px
+        +laptop_up
+            font-size: 30px
+
+.section-sub-title-bordered
+    text-align: center
+    +pad_up
+        text-align: left
+    +laptop_up
+        margin-bottom: 1%
+    > h3
+        color: #fff
+        font-size: 24px
+        // font-weight: bold
+        // font-style: italic
+        line-height: 1.8//43.2
+        background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+        -webkit-background-clip: text
+        -webkit-text-stroke: 1vw transparent // 4px
+        transform: skew(-6deg)
+        +pad_up
+            -webkit-text-stroke: 5px transparent
+            padding: 0 3px
+        +laptop_up
+            font-size: 30px
+            -webkit-text-stroke: 6px transparent
+        +desktop_up
+            font-size: 36px
+
+.th .section-sub-title-bordered > h3
+    font-weight: bold
+.cn .section-sub-title-bordered > h3
+    letter-spacing: 1px
+
+.section-slogan
+    display: flex
+    padding: 3.5% 0 3%
+    margin: 8px 0
+    +pad_up
+        padding: 2% 0
+        margin: 16px 0
+    // 單行標題
+    &.line
+        justify-content: center
+    // 多行標題
+    &.lines
+        flex-direction: column
+        align-items: center
+    > span
+        color: #fff
+        line-height: 1.5
+        padding: 0 3px
+        position: relative
+        -webkit-background-clip: text
+        -webkit-text-stroke: 1vw transparent // 4px
+        transform: skew(-8deg)
+        +pad_up
+            -webkit-text-stroke: 5px transparent
+        +laptop_up
+            -webkit-text-stroke: 6px transparent
+        +desktop_up
+            -webkit-text-stroke: 7px transparent
+        &:first-of-type:before, &:last-of-type:after
+            content: ""
+            width: 9.3vw
+            height: 6.1vw
+            background-size: cover
+            position: absolute
+            z-index: -1
+            +pad_up
+                width: 48px
+                height: 32px
+            +laptop_up
+                width: 54px
+                height: 36px
+        &:first-of-type:before
+            background-image: url("../images/lang_img/title-left.png")
+            top: 0
+            left: 0
+            transform: translate(-55%,-55%) skew(8deg)
+        &:last-of-type:after
+            background-image: url("../images/lang_img/title-right.png")
+            bottom: 0
+            right: 0
+            transform: translate(55%,45%) skew(8deg)
+
+.th .section-slogan > span
+    line-height: 1.7
+
+.color-stroke
+    // 單行標題漸層
+    &-100
+        background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+    // 兩行標題漸層
+    &-50
+        &-up
+            background-image: linear-gradient(180deg, #4c3b92 25%, #853b79 100%)
+        &-bottom
+            background-image: linear-gradient(180deg, #853b79 0%, #ed3b4b 75%)
+    // 3行標題漸層
+    &-33
+        &-up
+            background-image: linear-gradient(180deg, #4c3b92 35%, #673b86 100%)
+        &-middle
+            background-image: linear-gradient(180deg, #673b86 0%, #a63b6a 100%)
+        &-bottom
+            background-image: linear-gradient(180deg, #a63b6a 0%, #ed3b4b 65%)
+    // 4行標題漸層
+    &-25
+        &-up
+            background-image: linear-gradient(180deg, #4c3b92 0%, #5a3b8c 100%)
+        &-middle
+            &-up
+                background-image: linear-gradient(180deg, #5a3b8c 45%, #853b79 100%)
+            &-bottom
+                background-image: linear-gradient(180deg, #853b79 0%, #b73b63 100%)
+        &-bottom
+            background-image: linear-gradient(180deg, #b73b63 0%, #ed3b4b 55%)
+
+.cn
+    .color-stroke
+        &-100
+            font-size: 6.1vw
+            word-spacing: .5em
+        &-50
+            font-size: 5.8vw
+        +pad_up
+            &-50, &-100
+                font-size: 32px
+                font-weight: bold
+        +laptop_up
+            &-50, &-100
+                font-size: 40px
+                letter-spacing: 1px
+        +desktop_up
+            &-50, &-100
+                font-size: 48px
+                letter-spacing: 2px
+    // +pad_up
+    //     .section-slogan
+    //         &.toOneLine
+    //             flex-direction: row
+    //             justify-content: center
+    //     .toOneLine > .color-stroke-50
+    //             &-up, &-bottom
+    //                 background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+    //             &-bottom
+    //                 padding-left: 0.6em
+
+.en
+    .section-slogan
+        font-weight: bold
+        +pad_landscape_up
+            &.toOneLine
+                justify-content: center
+                flex-direction: row
+            &.toTwoLines
+                flex-wrap: wrap
+                justify-content: center
+                flex-direction: row
+        +desktop_up
+            &.toTwoLines
+                // max-width: 1200px
+                max-width: 1250px
+                margin: 0 auto
+    .color-stroke
+        &-100
+            font-size: 6.4vw
+        &-50, &-33, &-25
+            // font-size: 5.6vw
+            font-size: 5.48vw
+        +pad_up
+            &-100
+                font-size: 32px
+            &-50, &-33, &-25
+                font-size: 28px
+        +pad_landscape_up
+            &-100
+                font-size: 34px
+            &-50
+                font-size: 30px
+            &-33
+                font-size: 34px
+            &-25
+                font-size: 28px
+            &-25-middle-up, &-25-bottom, &-33-middle, &-50-bottom
+                padding-left: 0.2em
+            &-50-up, &-50-bottom
+                background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+            &-25-up, &-25-middle-up, &-33-up, &-33-middle
+                background-image: linear-gradient(180deg, #4c3b92 25%, #853b79 100%)
+            &-25-bottom, &-25-middle-bottom, &-33-bottom
+                background-image: linear-gradient(180deg, #853b79 0%, #ed3b4b 75%)
+        +laptop_up
+            &-100
+                font-size: 42px
+            &-50
+                font-size: 36px
+            &-33
+                font-size: 38px
+            &-25
+                font-size: 34px
+        +desktop_up
+            &-100
+                font-size: 46px
+            &-50, &-33
+                font-size: 40px
+            &-25
+                font-size: 38px
+.vn
+    .section-slogan
+        +pad_landscape_up
+            &.toOneLine, &.toTwoLines
+                flex-direction: row
+                justify-content: center
+            &.toTwoLines
+                flex-wrap: wrap
+        +desktop_up
+            &.toTwoLines
+                max-width: 1250px
+                margin: 0 auto
+    .color-stroke
+        &-100
+            font-size: 6vw
+        &-50, &-33
+            font-size: 6vw
+        &-25
+            font-size: 5.18vw
+        +pad_up
+            &-100
+                font-size: 4.2vw
+            &-50, &-33, &-25
+                font-size: 3.65vw
+        +pad_landscape_up
+            &-100
+                font-size: 3.4vw
+            &-33
+                font-size: 3.35vw;
+            &-50
+                font-size: 3.35vw;
+            &-25
+                font-size: 2.55vw
+            &-25-middle-up, &-25-bottom, &-33-middle, &-50-bottom
+                padding-left: 0.2em
+            &-50-up, &-50-bottom
+                background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+            &-25-up, &-25-middle-up, &-33-up, &-33-middle
+                background-image: linear-gradient(180deg, #4c3b92 25%, #853b79 100%)
+            &-25-bottom, &-25-middle-bottom, &-33-bottom
+                background-image: linear-gradient(180deg, #853b79 0%, #ed3b4b 75%)
+        +desktop_up
+            &-100, &-50
+                font-size: 42px
+            &-33
+                font-size: 45px
+            &-25
+                font-size: 35px
+    +pad_landscape_up
+        .toOneLine > .color-stroke
+            &-33-bottom
+                padding-left: 0.2em
+            &-33-up, &-33-middle, &-33-bottom
+                background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+
+.th
+    .section-slogan
+        font-weight: bold
+        +pad_landscape_up
+            &.toTwoLines, &.toOneLine
+                flex-direction: row
+                justify-content: center
+            &.toTwoLines
+                flex-wrap: wrap
+        +desktop_up
+            &.toTwoLines
+                max-width: 1250px
+                margin: 0 auto
+    .color-stroke
+        &-100, &-25
+            font-size: 6.4vw
+        &-50
+            font-size: 5.6vw
+        &-33
+            font-size: 6vw
+        +pad_up
+            &-100
+                font-size: 4.25vw
+            &-33, &-50, &-25
+                font-size: 3.6vw
+        +pad_landscape_up
+            &-33, &-25
+                font-size: 3.5vw;
+            &-25-middle-up, &-25-bottom, &-33-middle, &-50-bottom
+                padding-left: 0.2em
+            &-50-up, &-50-bottom
+                background-image: linear-gradient(180deg, #4c3b92 15%, #ed3b4b 85%)
+            &-25-up, &-25-middle-up, &-33-up, &-33-middle
+                background-image: linear-gradient(180deg, #4c3b92 25%, #853b79 100%)
+            &-25-bottom, &-25-middle-bottom, &-33-bottom
+                background-image: linear-gradient(180deg, #853b79 0%, #ed3b4b 75%)
+        +desktop_up
+            &-100, &-50, &-33, &-25
+                font-size: 46px
+
+.section-des
+    color: #fff
+    font-size: 15px
+    line-height: 1.7333
+    text-align: left
+    margin: 8px auto
+    &.with-gold-gradient
+        // background: -webkit-linear-gradient( rgba(185,120,2,1) 3%, rgba(240,226,137,1) 50%, rgba(186,120,2,1) 100%)
+        background-image: linear-gradient(180deg, rgba(185,120,2,1) 3%, rgba(240,226,137,1) 50%, rgba(186,120,2,1) 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    +pad_up
+        line-height: 2
+        &.has-top-line:before
+            content: ""
+            width: 60px
+            height: 2px
+            display: inline-block
+            background-image: linear-gradient(180deg, #fd5392 0%, #f86f64 100%)
+            margin-bottom: 16px
+    +laptop_up
+        font-size: 16px
+    +desktop_up
+        font-size: 18px
+    +desktop_hd_up
+        font-size: 20px
+
+.imgLink-wrap
+    +bg-rwd(cover)
+    border-radius: 8px
+    position: relative
+    img
+        opacity: 0
+    .text-wrap
+        color: #fff
+        +center-all
+        z-index: 5
+        a:hover
+            color: #fff
+            border-color: #fff
+
+// --- page banner ---
+.page-banner
+    height: 48vw
+    position: relative
+    +bg-rwd(cover)
+    +pad_up
+        height: 42vw
+    +pad_landscape_up
+        height: 30vw
+    +desktop_up
+        max-height: 520px
+    .page-banner-title
+        +center-all
+        h1
+            color: #fff
+            font-size: 1.75rem
+            font-weight: bold
+            +pad_up
+                font-size: 2.25rem
+            +pad_landscape_up
+                font-size: 2.5rem
+            +desktop_up
+                font-size: 3.75rem
+
+// --- system warning style ---
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger
+    font-size: 14px
+    text-align: center
+    padding: 16px
+    border-radius: 3px
+
+.vn > .wrapper
+    font-family: 'Tahoma', sans-serif !important

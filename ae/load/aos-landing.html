@@ -1,0 +1,113 @@
+<!-- <div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_1.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_1.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 1</div>
+</div> -->
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_2.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_2.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 2</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_3.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_3.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 3</div>
+</div>
+<!-- <div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_4.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_4.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 4</div>
+</div> -->
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_5.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_5.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 5</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_6.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_6.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 6</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_7.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_7.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 7</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_8.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_8.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 8</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_9.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_9.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 9</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_10.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_10.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 10</div>
+</div>
+<div class="theme-item">
+    <div class="theme-src">
+        <img src="../img/aos/template/landing/landing_11.jpg" alt="" class="theme-d">
+        <img src="../img/aos/template/landing/landing_m_11.jpg" alt="" class="theme-m">
+    </div>
+    <div class="theme-tit">Landing 11</div>
+</div>
+
+<div class="func">
+    <div class="dvc">
+        <div class="dvc-d">
+            <img src="../img/aos/icon_desktop.png" alt="">
+        </div>
+        <div class="dvc-m">
+            <img src="../img/aos/icon_mobile.png" alt="">
+        </div>
+    </div>
+    <div class="aos-close">
+        <img src="../img/aos/icon_close.png" alt="">
+    </div>
+</div>
+
+
+<script>
+    
+    $( '.theme-item' ).click(function() {
+        var index = $( '.theme-item .theme-src' ).index( this ) + 1;
+        // console.log(index);
+        $(this).addClass('zoom-in');
+        $('.func').addClass('show-func');
+        $('.dvc-m').click(function(){
+            $('.dvc, .theme-item.zoom-in').addClass('aos-m');
+        });
+        $('.dvc-d').click(function(){
+            $('.dvc, .theme-item.zoom-in').removeClass('aos-m');
+        });
+    });
+    $('.aos-close').click(function(){
+        $('.theme-item').removeClass('zoom-in');
+        $('.func').removeClass('show-func');
+        $('.dvc, .theme-item').removeClass('aos-m');
+    });
+</script>

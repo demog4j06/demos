@@ -1,0 +1,29 @@
+.pagination-bk
+    text-align: center
+.pagination
+    .pagination-list
+        display: flex
+    .page-item a, .page-ignore, .btn-next-page a, .btn-prev-page a
+        color: $color-darkest-gray
+        font-size: 14px
+        line-height: 48px
+        width: 48px
+        height: 48px
+        display: block
+        border: 1px solid $color-border-gray
+        border-radius: 3px
+        margin: 0 8px
+        &:hover
+            background-color: $color-light-gray
+    .page-item.current a
+        color: $color-main
+    .page-ignore
+        border: 0
+    li
+        &.btn-prev-page a
+            background-image: url("../images/common/icon_prev_b.svg")
+            +bg-rwd(14px 14px)
+        &.btn-next-page a
+            display: block
+            background-image: url("../images/common/icon_next_b.svg")
+            +bg-rwd(14px 14px)

@@ -1,0 +1,170 @@
+@charset "UTF-8"
+// Default Variables
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+// $slick-font-path: "./fonts/" !default
+// $slick-font-family: "slick" !default
+// $slick-loader-path: "./" !default
+// $slick-arrow-color: white !default
+// $slick-dot-color-active: $slick-dot-color !default
+// $slick-prev-character: "\2190" !default
+// $slick-next-character: "\2192" !default
+// $slick-dot-character: "\2022" !default
+// $slick-dot-size: 6px !default
+// $slick-opacity-default: 0.75 !default
+// $slick-opacity-on-hover: 1 !default
+// $slick-opacity-not-active: 0.25 !default
+$slick-dot-color: #fff !default
+// @function slick-image-url($url)
+// 	@if function-exists(image-url)
+// 		@return image-url($url)
+// 	@else
+// 		@return url($slick-loader-path + $url);
+// @function slick-font-url($url)
+// 	@if function-exists(font-url)
+// 		@return font-url($url)
+// 	@else
+// 		@return url($slick-font-path + $url)
+/* Slider */
+// .slick-list
+// 	.slick-loading &
+// 		background: #fff slick-image-url("ajax-loader.gif") center center no-repeat
+/* Icons */
+// @if $slick-font-family == "slick"
+// 	@font-face
+// 		font-family: "slick"
+// 		font-weight: normal
+// 		font-style: normal
+// 		src: slick-font-url("slick.eot")
+// 		src: slick-font-url("slick.eot?#iefix") format("embedded-opentype"), slick-font-url("slick.woff") format("woff"), slick-font-url("slick.ttf") format("truetype"), slick-font-url("slick.svg#slick") format("svg")
+
+// --- 首頁輪播大圖 ---
+.homepage-banner
+	max-width: 2560px
+	margin: auto
+	.slide > img
+		width: 100%
+/* Arrows */
+.slick-prev, .slick-next
+	font-size: 0
+	width: 30px
+	height: 56px
+	display: block
+	background: transparent
+	display: flex
+	border: none
+	outline: none
+	cursor: pointer
+	padding: 0
+	position: absolute
+	top: 50%
+	z-index: 1
+	transform: translate(0, -50%)
+	// color: transparent
+	&:hover, &:focus
+		outline: none
+		// color: transparent
+		// background: transparent
+		&:before
+			// opacity: $slick-opacity-on-hover
+	&.slick-disabled:before
+		// opacity: $slick-opacity-not-active
+	&:before
+		margin: auto
+		// color: $slick-arrow-color
+		// font-size: 20px
+		// line-height: 1
+		// font-family: $slick-font-family
+		// opacity: $slick-opacity-default
+		// -webkit-font-smoothing: antialiased
+		// -moz-osx-font-smoothing: grayscale
+
+.slick-prev
+	left: 0
+	// left: -25px
+	// [dir="rtl"] &
+	// 	left: auto
+	// 	right: -25px
+	// &:before
+	// 	content: $slick-prev-character
+	// 	[dir="rtl"] &
+	// 		content: $slick-next-character
+
+.slick-next
+	right: 0
+	// right: -25px
+	// [dir="rtl"] &
+	// 	left: -25px
+	// 	right: auto
+	// &:before
+	// 	content: $slick-next-character
+	// 	[dir="rtl"] &
+	// 		content: $slick-prev-character
+
+/* Dots */
+// .slick-dotted.slick-slider
+// 	margin-bottom: 30px
+.slick-dots
+	font-size: 0
+	text-align: center
+	width: 100%
+	display: block
+	// position: absolute
+	// left: 0
+	// bottom: -25px
+	// list-style: none
+	// padding: 0
+	// margin: 0
+	li
+		width: 16px
+		height: 16px
+		display: inline-block
+		cursor: pointer
+		position: relative
+		// padding: 0
+		// margin: 0 5px
+		+ li
+			margin-left: 8px
+		button
+			width: 100%
+			height: 100%
+			display: block
+			background: transparent
+			border: 0
+			outline: none
+			padding: 0
+			// color: transparent
+			// line-height: 0px
+			// cursor: pointer
+			&:hover, &:focus
+				outline: none
+				&:before
+					background-color: rgba($slick-dot-color,.5)
+					// opacity: $slick-opacity-on-hover
+			&:before
+				content: ""
+				width: 8px
+				height: 8px
+				background-color: $slick-dot-color
+				border-radius: 50%
+				box-shadow: 0 0 0 0 $slick-dot-color
+				position: absolute
+				top: 4px
+				left: 4px
+				transition: background-color .4s, box-shadow .4s
+				// content: $slick-dot-character
+				// color: $slick-dot-color
+				// font-size: $slick-dot-size
+				// font-family: $slick-font-family
+				// line-height: 20px
+				// text-align: center
+				// opacity: $slick-opacity-not-active
+				// -webkit-font-smoothing: antialiased
+				// -moz-osx-font-smoothing: grayscale
+		&.slick-active button:before
+			background-color: rgba($slick-dot-color,0)
+			box-shadow: 0 0 0 2px $slick-dot-color
+			// color: $slick-dot-color-active
+			// opacity: $slick-opacity-default

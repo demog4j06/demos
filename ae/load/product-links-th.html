@@ -1,0 +1,90 @@
+<a href="whitelabel.html"  class="fp-wl">AE WHITE LABEL</a>
+<a href="product-sport-plus.html" class="fp-sp" data-tag="new">AE SPORT+</a>
+<div class="pl-mtp plt-mtp-live">
+    <b>คาสิโนสด</b>
+    <div class="pl-sub for-1">
+        <a href="product-sexy.html" class="fp-sexy">AE SEXY</a>
+        <!-- <a href="product-casino.html" class="fp-casino" data-tag="new">AE CASINO</a> -->
+        <!-- <a href="product-live.html" class="fp-live">AE LIVE</a> -->
+    </div>
+</div>
+<div class="pl-mtp plt-mtp-egame">
+    <b>เกมสล็อต</b>
+    <div class="pl-sub for-1">
+        <a href="product-gaming.html" class="fp-gaming">AE GAMING</a>
+    </div>
+</div>
+<div class="pl-mtp plt-mtp-sports">
+    <b>กีฬา</b>
+    <div class="pl-sub for-2">
+        <a href="product-sports.html"  class="fp-sports">AE SPORTS</a>
+        <a href="product-cric.html"  class="fp-cric" data-tag="new">AE CRIC-EX</a>
+    </div>
+</div>
+<div class="pl-mtp plt-mtp-esports">
+  <b>อีสปอร์ต</b>
+  <div class="pl-sub for-1">
+    <a href="product-esports.html"  class="fp-esports">AE E-SPORTS</a>
+  </div>
+</div>
+<div class="pl-mtp plt-mtp-lotto">
+  <b>หวย</b>
+  <div class="pl-sub for-1">
+    <a href="product-lotto.html"  class="fp-lotto" data-tag="new">AE LOTTO</a>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    var curpage = window.location.pathname.split("/")[2];
+    var pName = curpage.replace("product-", "").replace(".html", "");
+    $('.header-product a[href="' + curpage + '"]').addClass("active");
+
+    if (
+      curpage == "product-sexy.html" ||
+      curpage == "product-casino.html" ||
+      curpage == "product-live.html"
+    ) {
+      $(".plt-mtp-live").addClass("active");
+      $(".plt-mtp-live b").text("AE " + pName);
+    } else {
+      $(".plt-mtp-live").removeClass("active");
+    }
+    if (curpage == "product-casino.html") {
+      $(".plt-mtp-live").attr("data-tag", "new");
+    }
+
+    if (curpage == "product-gaming.html" || curpage == "product-play.html") {
+      $(".plt-mtp-egame").addClass("active");
+      $(".plt-mtp-egame b").text("AE " + pName);
+    } else {
+      $(".plt-mtp-egame").removeClass("active");
+    }
+    if (curpage == "product-play.html") {
+      $(".plt-mtp-egame").attr("data-tag", "new");
+    }
+
+    if (curpage == "product-sports.html" || curpage == "product-cric.html") {
+      $(".plt-mtp-sports").addClass("active");
+      $(".plt-mtp-sports b").text("AE " + pName);
+    } else {
+      $(".plt-mtp-sports").removeClass("active");
+    }
+    if (curpage == "product-play.html") {
+      $(".plt-mtp-sports").attr("data-tag", "new");
+    }
+    if (curpage == "product-esports.html") {
+      $(".plt-mtp-esports").addClass("active");
+      $(".plt-mtp-esports b").text("AE " + pName);
+    } else {
+      $(".plt-mtp-esports").removeClass("active");
+    }
+
+    if (curpage == "product-lotto.html") {
+      $(".plt-mtp-lotto").addClass("active").attr("data-tag", "new");
+      $(".plt-mtp-lotto b").text("AE " + pName);
+    } else {
+      $(".plt-mtp-lotto").removeClass("active");
+    }
+  });
+</script>

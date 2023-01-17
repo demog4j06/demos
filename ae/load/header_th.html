@@ -1,0 +1,51 @@
+
+  <div class="logo">
+      <a href="./">AE</a>
+  </div>
+  <ul class="menu">
+      <li class="nav-milestone">
+          <a href="milestone.html">ประวัติแบรนด์</a>      
+      </li>
+      <li class="nav-wl">
+        <a href="whitelabel.html">บริการไวท์เลเบล</a>
+        <div class="header-product for-wl">
+            <span></span>
+        </div>       
+    </li>
+      <li class="nav-product">
+          <a href="product-sexy.html">ผลิตภัณฑ์เกม</a>
+          <div class="header-product">
+              <span></span>
+          </div>      
+      </li>
+      <li class="nav-partner">
+        <a href="partner.html">พันธมิตร</a>      
+    </li>
+      <li class="nav-news">
+          <a href="news.html">ข่าวสาร AE</a>      
+      </li>
+      <li class="nav-contact">
+          <a href="contact.html">ติดต่อเรา</a>      
+      </li>
+  </ul>
+  <div class="lang-selector dropdown">
+      <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <span class="icon-flag-th icon-flag-selected"></span><span>ไทย</span><span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li data-lang="CN"><a href="javascript:;"><span class="icon-flag-cn"></span><span>简体中文</span></a></li>
+          <li data-lang="EN"><a href="javascript:;"><span class="icon-flag-usa"></span><span>English</span></a></li>
+          <li data-lang="VI"><a href="javascript:;"><span class="icon-flag-vt"></span><span>Tiếng Việt</span></a></li>
+          <li data-lang="TH"><a href="javascript:;"><span class="icon-flag-th"></span><span>ไทย</span></a></li>
+      </ul>
+  </div>
+  <div class="toggle-menu-btn">
+    <span></span> 
+  </div>
+
+
+  <script>
+    $( document ).ready(function() {
+        $( ".header-product span" ).load( "../load/product-links-th.html" );
+    });
+</script>

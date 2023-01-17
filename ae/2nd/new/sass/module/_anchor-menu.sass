@@ -1,0 +1,230 @@
+// API介接 選單 (pc)
+.api-interface-menu-container
+    margin-bottom: 3rem
+    +desktop_up
+        margin-bottom: 7rem
+// --- 錨點選單 ---
+.anchor-menu-container
+    background-color: #0e0532
+.anchor-menu
+    color: #fff
+    background-color: #0e0532
+    display: flex
+    +pad_landscape_up
+        width: 70%
+        margin: 0 auto
+    +laptop_up
+            width: 50%
+    > li
+        flex: 1 1 0
+    a
+        color: #fff
+        text-align: center
+        height: 100%
+        display: block
+        padding: 8px 4px
+        transition: background-color .3s
+        +pad_up
+            padding: 10px 5px
+        +pad_landscape_up
+            padding: 12px 6px
+    span, i
+        display: block
+    span
+        line-height: 1.38
+    i
+        background-position: 0 0
+        background-size: cover
+        margin: 0 auto 6px
+        +pad_up
+            margin: 0 auto 8px
+        +desktop_up
+            margin: 0 auto 10px
+    .icon-ae-casino, .icon-ae-lottery, .icon-ae-gaming, .icon-ae-esport, .icon-ae-cricket, .icon-group-intro, .icon-product-intro, .icon-game-intro, .icon-event-news, .icon-ae-poker
+        width: 32px
+        height: 27px
+        +laptop_up
+            width: 65px
+            height: 55px
+    .icon-progress, .icon-api, .icon-partner, .icon-cooperation, .icon-event, .icon-timeline, .icon-social-media
+        width: 27px
+        height: 27px
+        +laptop_up
+            width: 55px
+            height: 55px
+    .icon-group-intro
+        background-image: url("../images/menu_icon/icon_group_intro.png")
+    .icon-product-intro
+        background-image: url("../images/menu_icon/icon_product_intro.png")
+    .icon-game-intro
+        background-image: url("../images/menu_icon/icon_game_intro.png")
+    .icon-event-news
+        background-image: url("../images/menu_icon/icon_event_intro.png")
+    .icon-progress
+        background-image: url("../images/menu_icon/icon_progress.png")
+    .icon-api
+        background-image: url("../images/menu_icon/icon_api.png")
+    .icon-partner
+        background-image: url("../images/menu_icon/icon_partner.png")
+    .icon-cooperation
+        background-image: url("../images/menu_icon/icon_cooperation.png")
+    .icon-timeline
+        background-image: url("../images/menu_icon/icon_timeline.png")
+    .icon-event
+        background-image: url("../images/menu_icon/icon_event.png")
+    .icon-social-media
+        background-image: url("../images/menu_icon/icon_social_media.png")
+    .icon-ae-casino
+        background-image: url("../images/menu_icon/icon_casino.png")
+    .icon-ae-lottery
+        background-image: url("../images/menu_icon/icon_lottery.png")
+    .icon-ae-gaming
+        background-image: url("../images/menu_icon/icon_gaming.png")
+    .icon-ae-esport
+        background-image: url("../images/menu_icon/icon_esport.png")
+    .icon-ae-cricket
+        background-image: url("../images/menu_icon/icon_cricket.png")
+    .icon-ae-poker
+        background-image: url("../images/menu_icon/icon_poker.png")
+    a:hover, .active > a
+        color: #f36720
+        background-color: #23194b
+        > i
+            background-position: 100% 0
+
+.vn, .en, .th
+    .anchor-menu
+        font-size: 14px
+        +pad_up
+            font-size: 16px
+        +desktop_up
+            font-size: 18px
+.cn .anchor-menu
+    font-size: 16px
+    +desktop_up
+        font-size: 18px
+.pageClass-business.vn .anchor-menu
+    +pad_up
+        font-size: 14px
+    +pad_landscape_up
+        font-size: 16px
+        width: 85%
+
+// API介接 下拉選單 (mobile)
+.api-interface-dropdownMenu
+    margin: 24px 0 56px
+.mobile-dropdownMenu
+    margin-bottom: 56px
+.api-interface-dropdownMenu, .mobile-dropdownMenu
+    text-align: center
+    &.open
+        > .dropdown-menu
+            max-height: 368px
+        .icon-arrow
+            transform: rotate(-180deg)
+    > button
+        color: #f36720
+        line-height: 42px
+        width: 90%
+        height: 42px
+        background-color: #3a307a
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 0
+        border-radius: 21px
+        outline: 0
+        margin: 0 auto
+        > i
+            margin-left: 20px
+            + span
+                text-align: left
+    .icon-arrow
+        width: 12px
+        height: 7px
+        margin-left: 8px
+        position: relative
+        transition: transform .3s
+        &:before, &:after
+            content: ""
+            width: 9px
+            height: 2px
+            background-color: #f36720
+            border-radius: 2px
+            position: absolute
+            top: 2.5px
+        &:before
+            left: 4px
+            transform: rotate(-45deg)
+        &:after
+            left: -1px
+            transform: rotate(45deg)
+    > .dropdown-menu
+        width: 90%
+        max-height: 0
+        display: block
+        overflow: hidden
+        background-color: #3a307a
+        border-radius: 12px
+        padding: 0
+        left: 5%
+        transition: max-height .48s
+        > li + li
+            border-top: 1px solid #554b92
+        a
+            color: #fff
+            font-size: 16px
+            line-height: 28px
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 8px 0
+            transition: background-color .3s
+            &:hover, &:focus
+                color: #f36720
+                background-color: #23194b
+                > i
+                    background-position: 100% 0
+    i
+        height: 27px
+        background-position: 0 0
+        background-size: cover
+        &.active
+            background-position: 100% 0
+    .icon-ae-casino, .icon-ae-lottery, .icon-ae-gaming, .icon-ae-esport, .icon-ae-cricket, .icon-group-intro, .icon-product-intro, .icon-game-intro, .icon-event-news, .icon-ae-poker
+        width: 32px
+        margin-right: 8px
+    .icon-timeline, .icon-social-media
+        width: 27px
+        margin-right: 13px
+    .icon-ae-casino
+        background-image: url("../images/menu_icon/icon_casino.png")
+    .icon-ae-lottery
+        background-image: url("../images/menu_icon/icon_lottery.png")
+    .icon-ae-gaming
+        background-image: url("../images/menu_icon/icon_gaming.png")
+    .icon-ae-esport
+        background-image: url("../images/menu_icon/icon_esport.png")
+    .icon-ae-cricket
+        background-image: url("../images/menu_icon/icon_cricket.png")
+    .icon-ae-poker
+        background-image: url("../images/menu_icon/icon_poker.png")
+    .icon-group-intro
+        background-image: url("../images/menu_icon/icon_group_intro.png")
+    .icon-product-intro
+        background-image: url("../images/menu_icon/icon_product_intro.png")
+    .icon-game-intro
+        background-image: url("../images/menu_icon/icon_game_intro.png")
+    .icon-event-news
+        background-image: url("../images/menu_icon/icon_event_intro.png")
+    .icon-timeline
+        background-image: url("../images/menu_icon/icon_timeline.png")
+    .icon-social-media
+        background-image: url("../images/menu_icon/icon_social_media.png")
+
+//  多語系設定 - API介接 下拉選單 (mobile)
+.pageClass-product
+    &.en, &.vn, &.th
+        .api-interface-dropdownMenu i + span
+            width: 90px

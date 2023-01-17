@@ -1,0 +1,124 @@
+// Media query style - for mobile first develope mode.
+=mobile
+	@media (min-width: 568px)
+		@content
+=pad_up
+	@media (min-width: 768px)
+		@content
+=pad_portrait_up
+	// @media (min-width: 767px) and (max-width: 991px)
+	@media (min-width: 768px) and (max-width: 991px)
+		@content
+=pad_landscape_up
+	@media (min-width: 992px)
+		@content
+=laptop_up
+	@media (min-width: 1200px)
+		@content
+=desktop_up
+	@media (min-width: 1336px)
+		@content
+=desktop_hd_up
+	@media (min-width: 1600px)
+		@content
+
+// 文字省略
+// 超過num行省略文字
+=text-ignore($num, $lh, $h)
+	line-height: $lh
+	text-overflow: ellipsis
+	-webkit-line-clamp: $num
+	-webkit-box-orient: vertical
+	display: -webkit-box
+	height: $h
+	overflow: hidden
+
+=text-ignore-new($num, $lh)
+	line-height: $lh
+	text-overflow: ellipsis
+	-webkit-line-clamp: $num
+	-webkit-box-orient: vertical
+	display: -webkit-box
+	overflow: hidden
+
+// before content
+=before-icon($w,$h)
+	content: ""
+	width: $w
+	height: $h
+	display: inline-block
+	background-position: 50% 50%
+	background-repeat: no-repeat
+
+// bg_rwd
+=bg-rwd($bgpos)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: $bgpos
+
+// icon
+=icon($url,$width,$height)
+	// +bg-rwd(cover)
+	width: $width
+	height: $height
+	display: inline-block
+	background-image: url($url)
+	background-repeat: no-repeat
+	background-position: 0 50%
+	background-size: $width $height
+
+=icon-resize($width,$height)
+	width: $width
+	height: $height
+	background-size: $width $height
+
+=icon-new($url,$width,$height)
+	width: $width
+	height: $height
+	background-image: url($url)
+	background-size: cover
+
+// components
+=img-container($width, $height)
+	width: $width
+	height: $height
+	background-color: #ccc
+	+bg-rwd(cover)
+
+// 大頭像
+=userPic($size)
+	height: $size
+	line-height: $size
+	> *
+		vertical-align: middle
+	> .imgWrap
+		width: $size
+		height: $size
+		background-image: url('../images/userPic-empty.svg')
+		+bg-rwd(cover)
+		border-radius: $size/2
+	> .userName
+		color: #666666
+		font-size: 1.125e
+		vertical-align: middle
+		margin-left: 1em
+
+=bg-icon($url,$width,$height)
+	display: inline-block
+	// +bg-rwd(cover)
+	background-image: url($url)
+	background-repeat: no-repeat
+	background-position: 50% 50%
+	background-size: $width $height
+
+=center-all
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+
+=center-bottom
+	position: absolute
+	bottom: 0
+	left: 50%
+	transform: translate(-50%, 50%)

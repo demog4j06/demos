@@ -1,0 +1,59 @@
+/* Slider */
+.slick-slider
+	display: block
+	box-sizing: border-box
+	user-select: none // 不能選取反白的設定
+	touch-action: pan-y // 允許單指垂直方向
+	-webkit-tap-highlight-color: transparent
+	position: relative
+.slick-list
+	display: block
+	overflow: hidden
+	padding: 0
+	margin: 0
+	position: relative
+	&:focus
+		outline: none
+	&.dragging
+		cursor: pointer
+		cursor: hand
+.slick-slider
+	.slick-track, .slick-list
+		transform: translate3d(0, 0, 0)
+.slick-track
+	display: block
+	margin-left: auto
+	margin-right: auto
+	position: relative
+	top: 0
+	left: 0
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+	.slick-loading &
+		visibility: hidden
+.slick-slide
+	height: 100%
+	min-height: 1px
+	display: none;
+	float: left
+	[dir="rtl"] &
+		float: right
+	img
+		display: block
+	&.slick-loading img
+		display: none
+	&.dragging img
+		pointer-events: none
+	.slick-initialized &
+		display: block
+	.slick-loading &
+		visibility: hidden
+	.slick-vertical &
+		height: auto
+		display: block
+		border: 1px solid transparent
+.slick-arrow.slick-hidden
+	display: none

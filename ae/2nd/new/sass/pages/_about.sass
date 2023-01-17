@@ -1,0 +1,520 @@
+.pageClass-about
+    // --- 內頁banner ---
+    .page-banner
+        background-image: url("../images/mobile/about/banner.jpg")
+        +pad_landscape_up
+            background-image: url("../images/pc/about/banner.jpg")
+
+    // --- 集团介绍 ---
+    #group-intro
+        background-image: url("../images/mobile/about/about_sec_01_bg.jpg")
+        +bg-rwd(cover)
+        +pad_landscape_up
+            background-image: url("../images/pc/about/about_sec_01_bg.jpg")
+        .section-title
+            margin-bottom: 0.875rem
+            +pad_up
+                margin-bottom: 1.5rem
+        .bannerLink
+            margin-top: 6%
+            position: relative
+            +pad_up
+                width: 60%
+                margin: 0 auto
+            +pad_landscape_up
+                width: 100%
+                max-width: 1332px
+                display: block
+                margin: 5% auto
+            .btn-readmore
+                // +center-bottom
+                position: absolute
+                left: 50%
+                bottom: 1.5%
+                transform: translate(-50%, 0)
+        .dflex-row
+            +pad_up
+                display: flex
+                align-items: center
+                justify-content: center
+                .imgwrap
+                    width: 50%
+                .section-des
+                    width: 50%
+
+    // --- AE产品介绍 ---
+    #product-intro
+        background-color: #0f0927
+        .section-title
+            margin-bottom: 5%
+        .product-intro-item--container
+            margin-bottom: 8%
+            +pad_up
+                margin-bottom: 3%
+        .product-intro-item
+            height: 52vw
+            display: block
+            +bg-rwd(100%)
+            overflow: hidden
+            margin-bottom: 3%
+            position: relative
+            +pad_up
+                height: 26vw
+                margin-bottom: 5%
+            +pad_landscape_up
+                height: 25vw
+            +laptop_up
+                margin-bottom: 3%
+                &:hover
+                    background-size: 105%
+        .product-intro-item--white-lable
+            background-image: url("../images/mobile/about/product_intro_01.jpg")
+            transition: .2s all ease-in
+            .product-intro-item--title-container
+                background: rgb(245,69,0)
+                background: linear-gradient(37deg, rgba(245,69,0,0.85) 0%, rgba(225,177,40,0.85) 100%)
+                transition: .2s all ease-in
+        .product-intro-item--api
+            background-image: url("../images/mobile/about/product_intro_02.jpg")
+            transition: .2s all ease-in
+            .product-intro-item--title-container
+                background: rgb(76,5,113)
+                background: linear-gradient(56deg, rgba(76,5,113,0.85) 0%, rgba(207,30,76,0.85) 100%)
+        // *標題置中置底
+        .product-intro-item--title-container
+            width: 180px
+            height: 180px
+            border-radius: 50%
+            +center-bottom
+            bottom: -5%
+            // *標題置右置底
+            +laptop_up
+                width: 240px
+                height: 240px
+                border-radius: 100% 0 0 0
+                // +center-bottom
+                left: auto
+                bottom: 10%
+                right: 0%
+                transform: translate(0, 50%)
+                transition: .2s all ease-in
+        .product-intro-item--title
+            color: #fff
+            text-align: center
+            margin-top: 15%
+            +laptop_up
+                width: 240px
+                padding-left: 60px
+                margin-top: 30%
+                margin-left: auto
+                margin-right: auto
+            .text-lg
+                font-size: 1.125rem
+                line-height: 1.125rem
+                font-weight: bold
+                // letter-spacing: 2px
+                transition: .2s all ease-in
+                +laptop_up
+                    font-size: 1.25rem
+            .text-sm
+                font-size: 0.75rem
+                transition: .2s all ease-in
+        .product-intro-sub-title
+            color: #fff
+            font-size: 1rem
+            font-weight: bold
+            line-height: 1.75rem
+            margin-bottom: 2%
+            +laptop_up
+                font-size: 1.125rem
+                text-align: center
+            +desktop_hd_up
+                font-size: 1.5rem
+        .product-intro-des
+            color: #e1e3ff
+            font-size: 0.875rem
+            line-height: 1.5rem
+            +laptop_up
+                font-size: 1rem
+                line-height: 1.875rem
+                text-align: center
+            +desktop_hd_up
+                padding: 0 5%
+
+        +laptop_up
+            // *hover 樣式
+            .product-intro-item:hover
+                .product-intro-item--title-container
+                    width: 280px
+                    height: 250px
+                    bottom: 15%
+                    right: 0
+                    .product-intro-item--title
+                        .text-lg
+                            font-size: 1.5rem
+                        .text-sm
+                            font-size: 0.875rem
+            .product-intro-sub-title, .product-intro-des
+                padding: 0 1rem
+
+        +desktop_hd_up
+            .product-intro-item--title-container
+                .product-intro-item--title
+                    .text-lg
+                        font-size: 1.5rem
+                        line-height: 1.875rem
+                    .text-sm
+                        font-size: 0.875rem
+
+            // *hover 樣式
+            .product-intro-item:hover .product-intro-item--title-container
+                .product-intro-item--title
+                    .text-lg
+                        font-size: 1.875rem
+                        line-height: 1.875rem
+                    .text-sm
+                        font-size: 1rem
+
+    // --- AE游戏介绍 ---
+    #ae-game-intro
+        background-image: url("../images/mobile/about/about_sec_03_bg.jpg")
+        +bg-rwd(cover)
+        .game-list-view
+            margin-top: 32px
+        .game-item
+            display: block
+            padding: 8px 0
+            position: relative
+        .game-item--title
+            color: #fff
+            font-size: 18px
+            font-weight: bold
+            line-height: 1.8
+            text-align: center
+            width: 100%
+            position: absolute
+            left: 0
+            bottom: 8px
+        .hover-mask
+            width: 100%
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            background-color: rgba(0,0,0,0.95)
+            visibility: hidden
+            opacity: 0
+            position: absolute
+            top: 0
+            left: 0
+            transition: .3s all ease-in
+        +pad_up
+            background-image: url("../images/pc/about/about_sec_03_bg.jpg")
+            .game-item
+                padding: 6px 0
+            .game-item--title
+                display: none
+        +laptop_up
+            .game-item
+                overflow: hidden
+                padding: 0
+                margin-bottom: 6px
+                &:hover
+                    > .hover-mask
+                        visibility: visible
+                        opacity: 1
+                    img
+                        transform: scale(1.1, 1.1)
+                img
+                    transition: .3s all ease-in
+            .logo
+                background-size: 100% 100%
+                margin: 0 auto 4%
+            .introText
+                color: #fff
+                line-height: 1.6
+                padding: 0 18px
+            .game-item--ae-casino
+                width: 271px
+                height: 136px
+                background-image: url("../images/lang_img/product_logo/ae_casino_logo.png")
+            .game-item--ae-lottery
+                width: 358px
+                height: 136px
+                background-image: url("../images/lang_img/product_logo/ae_lottery_logo.png")
+            .game-item--ae-cricket
+                width: 260px
+                height: 66px
+            .game-item--ae-slot
+                width: 337px*0.5
+                height: 136px*0.5
+                background-image: url("../images/lang_img/product_logo/ae_gaming_logo.png")
+            .game-item--ae-esport
+                width: 345px*0.5
+                height: 136px*0.5
+                background-image: url("../images/lang_img/product_logo/ae_esports_logo.png")
+    // --- AE活动花絮 ---
+    #ae-event-news
+        background-color: #181339
+        padding-bottom: 5rem
+        .event-view
+            margin-top: 2rem
+            .event-image
+                overflow: hidden
+                border-radius: 16px
+                +bg-rwd(cover)
+                img
+                    opacity: 0
+            .event-text
+                color: #fff
+                margin-top: 1rem
+                .title
+                    font-size: 1.125rem
+                    font-weight: bold
+                    line-height: 1.875rem
+                    +text-ignore(2, 1.875rem, 1.875rem*2)
+                .des
+                    font-size: 0.875rem
+                    line-height: 1.75rem
+                    +text-ignore(3, 1.5rem, 4.5rem)
+                    margin-top: 0.875rem
+                .control-bk
+                    text-align: center
+                    margin-top: 1rem
+
+            +pad_up
+                display: flex
+                align-items: center
+                justify-content: center
+                .event-image
+                    width: 45%
+                .event-text
+                    margin-top: 0
+                    padding-left: 3%
+                    width: 55%
+                    .control-bk
+                        text-align: left
+
+            +pad_landscape_up
+                .event-text
+                    .title
+                        +text-ignore(1, 1.875rem, 1.875rem)
+                    .control-bk
+                        margin-top: 5%
+
+        +laptop_up
+            padding-bottom: 8%
+            .event-view .event-text
+                .title
+                    font-size: 1.375rem
+                    +text-ignore(1, 2rem, 2rem)
+                .des
+                    font-size: 1rem
+                    line-height: 1.875rem
+                    +text-ignore(3, 1.875rem, 1.875rem*3)
+
+        +desktop_hd_up
+            .event-view .event-text
+                .title
+                    margin-bottom: 1.5rem
+                    font-size: 1.75rem
+                    +text-ignore(1, 2rem, 2rem)
+                .des
+                    font-size: 1.125rem
+                    line-height: 2rem
+                    +text-ignore(3, 2rem, 2rem*3)
+
+    // --- 多國語系設定 ---
+    +laptop_up
+        &.cn #ae-game-intro
+            .introText
+                font-size: 16px
+            .game-item--ae-cricket
+                background-image: url("../images/lang_img/cn/product_logo/ae_cricket.svg")
+        &.en, &.vn, &.th
+            #ae-game-intro
+                .introText
+                    font-size: 14px
+                .game-item--ae-cricket
+                    background-image: url("../images/lang_img/en/product_logo/ae_cricket.svg")
+
+.pageClass-about.en,
+.pageClass-about.vn,
+.pageClass-about.th
+    // AE产品介绍
+    #product-intro
+        // *標題置中置底
+        .product-intro-item--title-container
+        .product-intro-item--api .product-intro-item--title
+            margin-top: 20%
+        .product-intro-item--title
+            color: #fff
+            text-align: center
+            margin-top: 15%
+            .text-lg
+                font-size: 1rem
+                line-height: 1.125rem
+                font-weight: bold
+                // letter-spacing: 2px
+                transition: .2s all ease-in
+            .text-sm
+                font-size: 0.75rem
+                display: none
+                transition: .2s all ease-in
+
+        +pad_up
+            .product-intro-item--container
+                margin-bottom: 3%
+            .product-intro-item
+                height: 26vw    
+                margin-bottom: 5%
+        +pad_landscape_up
+            .product-intro-item
+                height: 25vw    
+                margin-bottom: 5%
+        +laptop_up
+            .product-intro-item
+                margin-bottom: 3%
+            // *標題置右置底
+            .product-intro-item--title-container
+                width: 260px
+                height: 260px
+                border-radius: 100% 0 0 0
+                +center-bottom
+                left: auto
+                transform: translate(0, 50%)
+                bottom: 10%
+                right: 0%
+                transition: .2s all ease-in
+                .product-intro-item--api .product-intro-item--title
+                    margin-top: 33%
+                .product-intro-item--title
+                    color: #fff
+                    text-align: center
+                    width: 240px
+                    padding-left: 60px
+                    margin-top: 30%
+                    margin-left: auto
+                    margin-right: auto
+                    .text-lg
+                        font-size: 1.125rem
+
+            // *hover 樣式
+            .product-intro-item:hover
+                background-size: 105%
+            .product-intro-item:hover .product-intro-item--title-container
+                width: 280px
+                height: 250px
+                bottom: 15%
+                right: 0
+                .product-intro-item--title
+                    .text-lg
+                        font-size: 1.5rem
+                    .text-sm
+                        font-size: 0.875rem
+
+            .product-intro-sub-title
+                font-size: 1.125rem
+                text-align: center
+            .product-intro-des
+                font-size: 1rem
+                line-height: 1.875rem
+                text-align: center
+            .product-intro-sub-title, .product-intro-des
+                padding: 0 1rem
+
+        +desktop_hd_up
+            .product-intro-sub-title
+                font-size: 1.25rem
+            .product-intro-des
+                font-size: 1rem
+                line-height: 1.875rem
+            .product-intro-sub-title
+                font-size: 1.5rem
+            .product-intro-des
+                font-size: 1rem
+                line-height: 1.875rem
+                padding: 0 5%
+            .product-intro-item--white-lable .product-intro-item--title
+                padding-left: 50px
+            .product-intro-item--title-container
+                .product-intro-item--title
+                    margin-top: 33%
+                    .text-lg
+                        font-size: 1.25rem
+                        line-height: 1.5rem
+                    .text-sm
+                        font-size: 0.875rem
+
+            // *hover 樣式
+            .product-intro-item:hover .product-intro-item--title-container
+                .product-intro-item--title
+                    .text-lg
+                        font-size: 1.5rem
+                        line-height: 1.75rem
+                    .text-sm
+                        font-size: 1rem
+
+.pageClass-about.vn
+    // AE 產品介紹
+    #product-intro
+        .product-intro-item--title
+            padding: 0 25px
+        +laptop_up
+            .product-intro-item
+                margin-bottom: 3%
+            // *標題置右置底
+            .product-intro-item--title-container
+                width: 260px
+                height: 260px
+                border-radius: 100% 0 0 0
+                +center-bottom
+                left: auto
+                transform: translate(0, 50%)
+                bottom: 10%
+                right: 0%
+                transition: .2s all ease-in
+                .product-intro-item--api .product-intro-item--title
+                    margin-top: 33%
+                .product-intro-item--title
+                    margin-top: 33%
+                    margin-left: auto
+                    margin-right: auto
+                    padding: 0
+                    padding-left: 60px
+                    width: 240px
+                    color: #fff
+                    text-align: center
+                    .text-lg
+                        font-size: 1.25rem
+
+            // *hover 樣式
+            .product-intro-item:hover
+                background-size: 105%
+            .product-intro-item:hover .product-intro-item--title-container
+                width: 280px
+                height: 250px
+                bottom: 15%
+                right: 0
+                .product-intro-item--title
+                    width: 240px    
+                    .text-lg
+                        font-size: 1.375rem
+                    .text-sm
+                        font-size: 0.875rem
+            .product-intro-sub-title
+                font-size: 1.125rem
+                text-align: center
+            .product-intro-des
+                text-align: center
+                font-size: 1rem
+                line-height: 1.875rem
+            .product-intro-sub-title, .product-intro-des
+                padding: 0 1rem
+
+.pageClass-about.th
+    // AE产品介绍
+    #product-intro
+        // *標題置中置底
+        .product-intro-item--title
+            margin-top: 20%

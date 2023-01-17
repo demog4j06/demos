@@ -1,0 +1,373 @@
+.pageClass-brand
+    // --- 內頁banner ---
+    .page-banner
+        background-image: url("../images/mobile/brand/banner.jpg")
+        +pad_landscape_up
+            background-image: url("../images/pc/brand/banner.jpg")
+
+// --- 品牌历程 ---
+.pageClass-brand-timeline
+    .brand-time-line-intro-view
+        background-image: url("../images/mobile/brand/brand_timeline_bg.jpg")
+        +bg-rwd(cover)
+        background-position: center top
+        background-attachment: fixed
+        +pad_landscape_up
+            background-image: url("../images/pc/brand/brand_timeline_bg.jpg")
+            +bg-rwd(cover)
+            background-attachment: fixed
+
+    .timeline-list
+        li.now, li:hover
+            .year
+                color: #fff
+                font-size: 36px
+            .event .event-title, .event .event-list
+                color: #fff
+            .event:before
+                opacity: 1
+            .event-title
+                height: 32px
+                background-image: url("../images/mobile/brand/year_bg.png")
+                background-size: contain
+                background-repeat: no-repeat
+                &:before, &:after
+                    opacity: 1
+        .year
+            margin-top: 1rem
+            margin-bottom: 0.5rem
+            font-size: 32px 
+            font-family: 'Times New Roman'
+            font-style: italic
+            color: #9a97c7
+            transition: .2s all ease-in
+        .event
+            color: #9a97c7
+            transition: .3s all ease-in
+            .event-title
+                margin-bottom: 1rem
+                padding-left: 1.75rem
+                position: relative
+                font-size: 17px
+                font-weight: bold
+                display: flex
+                align-items: center
+                transition: .3s all ease-in
+                &:before
+                    content: ""
+                    display: inline-block
+                    width: 10px
+                    height: 10px
+                    background-color: #fff
+                    position: absolute
+                    left: 5px
+                    border-radius: 50%
+                    opacity: 0.5
+                    transition: .2s all ease-in
+                &:after
+                    content: ""
+                    display: inline-block
+                    width: 20px
+                    height: 20px
+                    background-color: rgba(255,255,255,0.5)
+                    position: absolute
+                    left: 0
+                    border-radius: 50%
+                    opacity: 0.5
+                    transition: .2s all ease-in
+            .event-list
+                margin-left: 1.75rem
+                list-style-type: disc
+                li
+                    margin-bottom: 1rem
+                    font-size: 15px
+                    line-height: 1.5rem
+                    transition: .2s all ease-in
+
+        +pad_up
+            margin: 4% 0 8% 0
+            display: flex
+            justify-content: center
+            li.now .event
+                margin-top: 10px
+            .year
+                margin: 0
+                text-align: center
+                float: left
+                width: 90px
+            .event
+                margin-top: 12px
+                position: relative
+                float: left
+                width: calc(100% - 120px)
+                &:before
+                    display: inline-block
+                    content: ""
+                    width: 1px
+                    height: 73%
+                    position: absolute
+                    left: -3rem
+                    top: 40px
+                    background-color: #fff
+                    opacity: 0.5
+
+        +laptop_up
+            li.now, li:hover
+                .year
+                    font-size: 56px
+                    width: 140px
+                .event
+                    margin-top: 18px
+                    padding-bottom: 5%
+                    .event-title
+                        padding-left: 2.25rem
+                        height: 48px    
+                        &:before
+                            left: 6px
+                            width: 16px
+                            height: 16px
+                        &:after
+                            width: 28px 
+                            height: 28px
+            // 調整字型大小
+            .year
+                font-size: 48px
+                width: 140px
+            .event
+                margin-top: 1.125rem
+                margin-bottom: 1rem
+                width: calc(100% - 140px)
+                &:before
+                    top: 60px
+                    left: -4.8rem
+                    height: 65%
+                .event-title
+                    font-size: 24px
+                .event-list li
+                    font-size: 16px
+
+        +desktop_up
+            li.last
+                .event:before
+                    display: none
+            li.now, li:hover
+                .year
+                    font-size: 86px
+                    width: 220px
+                .event
+                    margin-top: 40px
+                    padding-bottom: 5%
+                    .event-title
+                        padding-left: 2.25rem
+                        height: 48px
+                        &:before
+                            left: 6px
+                            width: 16px
+                            height: 16px
+                        &:after
+                            width: 28px
+                            height: 28px
+            // 調整字型大小
+            .year
+                font-size: 60px
+                width: 220px
+            .event
+                width: calc(100% - 220px)
+                margin-top: 20px
+                margin-bottom: 16px
+                &:before
+                    height: 65%
+                    top: 80px
+                    left: -15%
+                .event-title
+                    margin-bottom: 1.5rem
+                    font-size: 1.875rem
+                .event-list li
+                    font-size: 1.125rem
+                    line-height: 1.875rem
+
+// --- 品牌活动 ---
+
+// 列表
+=event-image
+    display: block
+    margin: 16px 0
+
+.brand-event-list-intro-view
+    background-color: #140e2f
+    padding-top: 0
+    time
+        font-size: 14px
+        font-style: italic
+        display: block
+    +pad_up
+        padding-top: 48px
+    > .container
+        color: #fff
+        > a
+            +event-image
+            pointer-events: none
+            padding: 32px 16px 0
+            +pad_up
+                text-align: center
+        > div
+            // max-width: 1500px
+            // margin: 0 auto
+            +desktop_up
+                padding: 0 80px
+            > time
+                padding: 4px 16px
+            > h2
+                color: #f36720
+                font-size: 22px
+                line-height: 1.4
+                padding: 16px
+                +pad_up
+                    font-size: 28px
+                    text-align: center
+                +laptop_up
+                    font-size: 32px
+            > p
+                line-height: 1.5
+                padding: 0 16px
+                margin-top: 16px
+                > strong
+                    color: #f36720
+                    font-size: 22px
+                    line-height: 1.4
+                    display: block
+                    padding: 16px 0
+                    +pad_up
+                        font-size: 28px
+                        text-align: center
+                    +laptop_up
+                        font-size: 32px
+                > a
+                    color:#fecf60
+                    &:hover
+                        text-decoration: underline
+            > div
+                text-align: center
+                padding: 32px 16px 16px
+            > .control-bk
+                border-bottom: 1px solid #3a325e
+                padding-bottom: 48px
+                margin-bottom: 32px
+            .btn-bordered
+                display: none
+            .tac
+                padding-bottom: 48px
+
+    .event-list
+        max-width: 1500px
+        margin: 0 auto
+        +pad_up
+            margin-top: 32px
+    .event-item
+        border-bottom: 1px solid #3a325e
+        padding: 32px 16px
+        > a
+            +event-image
+            pointer-events: auto
+        img
+            border-radius: 12px
+        time, h2
+            margin-bottom: 8px
+        h2
+            font-size: 18px
+            +text-ignore-new(2, 30px)
+            + p
+                font-size: 15px
+                font-weight: normal
+                +text-ignore-new(3, 2)
+                margin-bottom: 14px
+                ~ p
+                    font-size: 0
+                ~ div
+                    display: none
+                ~ .control-bk
+                    display: block
+        .btn-primary
+            display: none
+        +pad_up
+            display: flex
+            align-items: center
+            > a, > div
+                width: 50%
+            > a
+                max-width: 580px
+                margin: 0
+            > div
+                flex-grow: 1
+                padding-left: 24px
+            time, h2
+                margin-bottom: 16px
+            time
+                font-size: 15px
+            h2
+                font-size: 20px
+                + p
+                    margin-bottom: 24px
+
+    h2
+        font-weight: bold
+    .control-bk
+        text-align: center
+        +pad_up
+            text-align: left
+
+// --- 影音及社群 ---
+.pageClass-brand-social-media
+    background-image: url("../images/mobile/brand/brand_social_media_bg.jpg")
+    +bg-rwd(cover)
+    background-attachment: fixed
+    +pad_landscape_up
+        background-image: url("../images/pc/brand/brand_social_media_bg.jpg")
+        +bg-rwd(cover)
+        background-attachment: initial
+    // slogan
+    .section-slogan-2 img
+        height: 60px
+        +pad_up
+            height: 70px
+            margin: 3% 0
+        +laptop_up
+            height: 90px
+        +desktop_up
+            height: 150px
+            margin: 4% 0
+    // video
+    .video-wrap
+        text-align: center
+        padding: 0 5%
+        margin-bottom: 15%
+        +pad_up
+            margin-bottom: 10%
+        iframe
+            width: 100%
+            height: 45vw
+            +pad_up
+                width: 80%
+                height: 35vw
+            +laptop_up
+                height: 38vw
+            +desktop_up
+                width: 60%
+                height: 28vw
+
+// ------------------------------------
+// 多語系設定
+// ------------------------------------
+.pageClass-brand-timeline
+    &.en, .vn, .th
+        ul.progress-list li .text .text-sm
+            display: none
+        .timeline-list .event:before
+            +pad_up
+                left: -3rem
+            +laptop_up
+                left: -4.8rem
+            +desktop_up
+                left: -7rem
+            +desktop_hd_up
+                left: -7rem

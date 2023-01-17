@@ -1,0 +1,249 @@
+.wrapper, .wrap
+    padding-top: 64px
+.navigator, .aeNav
+    width: 100%
+    height: 64px
+    background-color: #1d0e48
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1
+    .nav-logo
+        +icon('../images/common/logo.svg', 100px, 42px)
+        float: left
+        margin-top: 12px
+        +laptop_up
+            margin-top: 1rem
+            +icon-resize(100px*1.15, 42px*1.15)
+        +desktop_up
+            +icon-resize(100px*1.25, 42px*1.25)
+    .nav-slogan
+        +icon('../images/lang_img/cn/nav/slogan.png', 136px, 20px)
+        float: left
+        margin-top: 26px
+        +pad_up
+            margin-top: 23px
+        +laptop_up
+            margin-top: 1.875rem
+            margin-left: 0.5rem
+            +icon-resize(136px*1.1, 20px*1.1)
+        +desktop_up
+            +icon-resize(136px*1.3, 20px*1.3)
+    .toggle-menu-btn
+        +icon('../images/mobile/icon_toggle_menu.png', 26px, 16px)
+        float: right
+        margin-top: 24px
+    .mobile-menu-wrap
+        width: 240px
+        height: 100vh
+        background-color: #1d1631
+        position: fixed
+        top: 0
+        right: -240px
+        z-index: 200
+        transition: all .3s ease-in
+        &.active
+            right: 0
+        .btn-close-mobile-menu
+            +icon("../images/common/icon_close.png", 18px, 18px)
+            position: absolute
+            right: 1rem
+            top: -5.5rem
+            z-index: 999
+        .menu-items
+            display: flex
+            justify-content: flex-end
+            margin-top: 7rem
+            position: relative
+            > a
+                display: block
+                color: #fff
+                text-align: center
+                border-bottom: 1px solid #4f466b
+                padding: 0.75rem 0
+                &:first-child
+                    border-top: 1px solid #4f466b
+        @media (max-width:1199px)
+            .menu-items
+                flex-wrap: wrap
+                > a
+                    width: 100%
+        +laptop_up
+            width: auto
+            height: auto
+            background-color: transparent
+            float: right
+            margin-top: 1.25rem
+            position: static
+            .menu-items
+                margin-top: 0
+                > a
+                    font-weight: bold
+                    border: 0
+                    margin: 0 0.375rem
+        +desktop_up
+            .menu-items
+                width: 900px
+                > a
+                    margin: 0 1%
+        +desktop_hd_up
+            .menu-items
+                width: 1150px
+                > a
+                    margin: 0 2%
+
+    .overlayer
+        width: 100%
+        height: 100vh
+        background-color: rgba(0,0,0,0.75)
+        visibility: hidden
+        opacity: 0
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 100
+        transition: all .3s ease-in
+        &.active
+            visibility: visible
+            opacity: 1
+
+    .lang-selector
+        text-align: center
+        width: 240px
+        position: absolute
+        top: -3.5rem
+        right: 0
+        z-index: 999
+        &.open button
+            background-color: #6a647d
+            .caret
+                transform: rotate(180deg)
+        button
+            color: #fff
+            font-size: 15px    
+            line-height: 36px
+            width: 165px
+            height: 36px
+            display: inline-block
+            background-color: #3a344c
+            border: 0
+            border-radius: 18px
+            outline: 0
+            padding: 0 1rem
+            transition: all .3s ease-in
+            .caret
+                +icon("../images/common/icon_arrow_down_xs_w.png", 12px, 7px)
+                border: 0
+                margin-left: 1rem
+            .icon-flag-selected
+                position: relative
+                top: 6px
+
+        .dropdown-menu
+            width: 156px
+            min-width: 156px
+            background-color: #3a344c
+            border-radius: 12px
+            overflow: hidden
+            padding: 0
+            left: 41px
+            li
+                a
+                    color: #fff
+                    text-align: left
+                    display: flex
+                    align-items: center
+                    border-top: 1px solid #4f466b
+                    padding: 0.5rem 1.25rem
+                    &:hover
+                        background-color: #6a647d
+                &:first-child a
+                    border: 0
+
+        .icon-flag-cn
+            margin-right: 0.5rem
+            +icon("../images/common/icon_flag_cn.png", 24px, 24px)
+        .icon-flag-usa
+            margin-right: 0.5rem
+            +icon("../images/common/icon_flag_usa.png", 24px, 24px)
+        .icon-flag-vt
+            margin-right: 0.5rem
+            +icon("../images/common/icon_flag_vt.png", 24px, 24px)
+        .icon-flag-th
+            margin-right: 0.5rem
+            +icon("../images/common/icon_flag_th.png", 24px, 24px)
+        +laptop_up
+            width: auto
+            float: right
+            margin-top: 0.3rem
+            margin-left: 1rem
+            position: relative
+            top: 0
+            button
+                background-color: rgba(255,255,255,0.15)
+            .dropdown-menu
+                left: 0
+
+    > .contactInfo-bar
+        color: #fff
+        font-size: 0.875rem
+        display: none
+        width: 100%
+        background-color: #100a23
+        padding: 0.5rem 0
+        .contact-item
+            margin: 0 1.5rem
+            &:last-child
+                margin-right: 0
+        .icon-tlg-orange
+            margin-right: 0.5rem
+            +icon("../images/common/icon_tlg_orange.png", 23px, 18px)
+        .icon-whatapp-orange
+            margin-right: 0.5rem
+            +icon("../images/common/icon_whatapp_orange.png", 21px, 22px)
+        .icon-email-orange
+            margin-right: 0.5rem
+            +icon("../images/common/icon_email_orange.png", 20px, 16px)
+
+    &.fixed
+        background-color: #141437
+        .menu-items a:hover
+            color: #f03d22
+
++laptop_up
+    .navigator, .aeNav
+        background-color: transparent
+        &.fixed
+            height: 125px
+            background-color: #1d0e48
+            box-shadow: 0 4px 16px rgba(#000,.45)
+            animation: fadeIn .4s linear
+            > .contactInfo-bar
+                display: block
+    .wrapper, .wrap
+        padding-top: 0
+
+.en, .th, .vn
+    .navigator, .aeNav
+        .nav-slogan
+            +icon('../images/lang_img/en/nav/slogan.png', 136px, 20px)
+            +pad_up
+                margin-top: 20px
+                +icon-resize(136px*1.6, 20px*1.6)
+            +laptop_up
+                margin-top: 1.3rem
+                margin-left: 0rem
+                +icon-resize(136px*1.5, 20px*1.5)
+            +desktop_up
+                +icon-resize(136px*1.9, 20px*1.9)
+        .mobile-menu-wrap
+            +desktop_up
+                .menu-items
+                    width: auto
+                    > a
+                        margin: 0 1%
+                        white-space: nowrap
+            +desktop_hd_up
+                .menu-items
+                    > a
+                        margin: 0 2%

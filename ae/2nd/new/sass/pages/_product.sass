@@ -1,0 +1,151 @@
+.pageClass-product
+    width: 100%
+    overflow: hidden
+    // --- 內頁banner ---
+    .page-banner
+        background-image: url("../images/mobile/products/banner.jpg")
+        +pad_landscape_up
+            background-image: url("../images/pc/products/banner.jpg")
+
+    // --- 頁籤選單 ---
+    .gameCategory-menu
+        ul li
+            width: 50%
+            float: left
+            +bg-rwd(cover)
+            transition: .1s all ease-in
+            a
+                color: #fff
+                font-size: 0.9375rem
+                font-weight: bold
+                text-align: center
+                // line-height: 80px
+                // display: block
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 80px
+            &.white-lable
+                background-image: url("../images/mobile/products/nav_1.jpg")
+                background-position: center top
+            &.api-interface
+                background-image: url("../images/mobile/products/nav_2.jpg")
+                background-position: center top
+            &.active.white-lable
+                background-image: url("../images/mobile/products/nav_1_h.jpg")
+                background-position: center top
+            &.active.api-interface
+                background-image: url("../images/mobile/products/nav_2_h.jpg")
+                background-position: center top
+            +pad_landscape_up
+                &.api-interface
+                    background-image: url("../images/pc/products/nav_2.jpg")
+                    background-position: center top
+                &.white-lable, &:hover.white-lable
+                    background-image: url("../images/pc/products/nav_1.jpg")
+                    background-position: center top
+                &.active.white-lable, &:hover.white-lable
+                    background-image: url("../images/pc/products/nav_1_h.jpg")
+                    background-position: center top
+                &.active.api-interface, &:hover.api-interface
+                    background-image: url("../images/pc/products/nav_2_h.jpg")
+                    background-position: center top
+        +laptop_up
+            ul li a
+                font-size: 1.875rem
+                height: 90px
+                line-height: 90px
+    // --- 產品頁共用樣式 ---
+
+    // 產品圖文介紹區塊
+    .product-intro-view
+        background-color: #191135
+        background-image: url("../images/mobile/products/bg_m.jpg")
+        +bg-rwd(cover)
+        background-attachment: fixed
+        padding-bottom: 96px
+        +pad_up
+            background-image: url("../images/pc/products/bg_pc.jpg")
+        +desktop_hd_up
+            padding-bottom: 160px
+
+    // 優勢列表
+    .adventage-list
+        // .section-sub-title-bordered
+        //     margin-bottom: 0.5rem
+        > ul
+            // display: block
+            width: 80%
+            margin: -5px auto 0
+            // 漸層分隔線
+            &:before
+                content: ""
+                width: 100%
+                height: 1px
+                background-image: linear-gradient(140deg, #fd5392 0%, #f86f64 100%)
+                display: block
+                margin-bottom: 8px
+        li
+            color: #fff
+            font-size: 16px
+            font-weight: bold
+            // line-height: 28px
+            line-height: 1.75
+            text-align: left
+            margin-bottom: 4px
+            &:before
+                content: ""
+                width: 6px
+                height: 6px
+                float: left
+                vertical-align: middle
+                background-color: #fff
+                border-radius: 50%
+                opacity: 0.75
+                margin-top: 12px
+                margin-right: 8px
+            > .intro-text
+                width: calc(100% - 1.5rem)
+                float: left
+            span
+                font-size: 14px
+                font-weight: normal
+                display: block
+        +pad_up
+            ul
+                width: 100%
+                &:before
+                    width: 90%
+                    margin: 24px 0 16px 0
+            li:before
+                    width: 8px
+                    height: 8px
+                    border-radius: 4px
+                    margin-top: 12px
+        +laptop_up
+            ul
+                &:before
+                    height: 2px
+            li
+                font-size: 18px
+                line-height: 2.2
+                margin-bottom: 8px
+                &:before
+                    width: 12px
+                    height: 12px
+                    border-radius: 6px
+                    margin-top: 17px
+                    margin-right: 16px
+                > .intro-text
+                    width: calc(100% - 2rem)
+                span
+                    font-size: 16px
+
+    // 左右圖文區塊 flex 設定
+    .intro-container
+        +pad_up
+            display: flex
+            align-items: center
+            justify-content: center
+            .intro-container-left, .intro-container-right
+                width: 50%

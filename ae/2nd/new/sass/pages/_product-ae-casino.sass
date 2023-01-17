@@ -1,0 +1,60 @@
+// --- 個頁面樣式-AE真人 ---
+.pageClass-product-ae-casino
+    // product logo
+    .product-logo
+        &.ae-casino, &.ae-poker
+            background-size: cover
+            margin: 0 auto
+        &.ae-casino
+            width: 308/2+px
+            height: 179/2+px
+            background-image: url("../images/pc/products/casino/logo.png")
+        &.ae-poker
+            width: 348/2+px
+            height: 133/2+px
+            background-image: url("../images/pc/products/poker/logo.png")
+    // adventage list
+    .product-adventage-intro-block .adventage-list li
+        font-weight: bold
+        margin-bottom: 16px
+        &:before
+            margin-top: 7px
+        h4
+            font-weight: bold
+            margin-right: 14px
+
+    +pad_up
+        .product-logo
+            &.ae-casino
+                width: 308px*0.75
+                height: 179px*0.75
+                // margin-top: 0
+            &.ae-poker
+                width: 348px*0.75
+                height: 133px*0.75
+        .product-adventage-intro-block
+            .intro-container-left
+                width: 65%
+            .intro-container-right
+                width: 35%
+            .adventage-list li
+                display: block
+                margin-bottom: 8px
+
+    +laptop_up
+        .product-logo
+            &.ae-casino
+                width: 308px
+                height: 179px
+            &.ae-poker
+                width: 348px
+                height: 133px
+        .product-adventage-intro-block .adventage-list li
+            margin-bottom: 20px
+            &:before
+                margin-top: 11px
+            h4
+                font-size: 26px
+                margin-bottom: 8px
+            p
+                font-weight: normal

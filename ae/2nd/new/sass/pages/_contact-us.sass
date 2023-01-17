@@ -1,0 +1,68 @@
+.pageClass-contact
+    .page-banner
+        background-image: url("../images/mobile/contact/banner.jpg")
+        +pad_landscape_up
+            background-image: url("../images/pc/contact/banner.jpg")
+
+
+    .contact-form-view
+        background-image: url("../images/mobile/contact/contact_bg.jpg")
+        background-position: 50% 50%
+        padding-bottom: 6rem
+        background-color: #151246
+        text-align: center
+        +pad_landscape_up
+            background-image: url("../images/pc/contact/contact_bg.jpg")
+
+        +laptop_up
+            padding-bottom: 8rem
+
+        +desktop_hd_up
+            padding-bottom: 10rem
+
+        h2
+            color: #f36720
+            font-weight: bold
+            font-size: 24px
+            line-height: 1.5
+            background: -webkit-linear-gradient(#fa8b1d, #d22210)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            +laptop_up
+                font-size: 36px
+                text-align: left
+        // input.authcode
+        .btn-refresh
+            margin-top: 0.625rem
+            color: #a5a6d4
+            justify-content: start
+            cursor: pointer
+            &:hover
+                color: #bcbde9
+                text-decoration: underline
+            .icon-refresh
+                margin-right: 0.5rem
+                +icon("../images/common/icon_refresh.png", 22px, 22px)
+
+        .notice
+            margin: 1rem 0
+            color: #aaacda
+            font-size: 0.8125rem
+            +laptop_up
+                margin-top: 3rem
+                margin-bottom: 1.5rem
+                text-align: left
+                font-size: 0.9375rem
+
+        +laptop_up
+            .container
+                max-width: 1000px
+
+        +desktop_up
+            .container
+                max-width: 1200px
+
+    .img-auth-code
+        position: absolute
+        right: 0.6rem
+        top: 0

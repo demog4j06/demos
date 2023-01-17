@@ -1,0 +1,117 @@
+<a href="whitelabel.html" class="fp-wl">综合包网</a>
+<a href="product-sport-plus.html" class="fp-sp" data-tag="new">体育包网</a>
+<div class="pl-mtp plt-mtp-live">
+  <b>真人</b>
+  <div class="pl-sub for-1">
+    <a href="product-sexy.html" class="fp-sexy">AE 性感百家</a>
+    <!-- <a href="product-casino.html" class="fp-casino" data-tag="new"
+      >AE 真人娱乐</a
+    > -->
+    <!-- <a href="product-live.html" class="fp-live">AE 真人直播</a> -->
+  </div>
+</div>
+<div class="pl-mtp plt-mtp-egame">
+  <b>电子</b>
+  <div class="pl-sub for-1">
+    <a href="product-gaming.html" class="fp-gaming">AE 电子游戏</a>
+  </div>
+</div>
+<div class="pl-mtp plt-mtp-sports">
+  <b>体育</b>
+  <div class="pl-sub for-2">
+    <a href="product-sports.html" class="fp-sports">AE 体育竞技</a>
+    <a href="product-cric.html" class="fp-cric" data-tag="new">AE 板球交易</a>
+  </div>
+</div>
+<div class="pl-mtp plt-mtp-esports">
+  <b>电竞</b>
+  <div class="pl-sub for-1">
+    <a href="product-esports.html"  class="fp-esports">AE 电竞手游</a>
+  </div>
+</div>
+<div class="pl-mtp plt-mtp-lotto">
+  <b>彩票</b>
+  <div class="pl-sub for-1">
+    <a href="product-lotto.html"  class="fp-lotto" data-tag="new">AE 彩票游戏</a>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    var curpage = window.location.pathname.split("/")[2];
+    var pName = curpage.replace("product-", "").replace(".html", "");
+    $('.header-product a[href="' + curpage + '"]').addClass("active");
+
+    if (
+      curpage == "product-sexy.html" ||
+      curpage == "product-casino.html" ||
+      curpage == "product-live.html"
+    ) {
+      $(".plt-mtp-live").addClass("active");
+    } else {
+      $(".plt-mtp-live").removeClass("active");
+    }
+    if (curpage == "product-casino.html") {
+      $(".plt-mtp-live").attr("data-tag", "new");
+    }
+
+    if (curpage == "product-gaming.html" || curpage == "product-play.html") {
+      $(".plt-mtp-egame").addClass("active");
+    } else {
+      $(".plt-mtp-egame").removeClass("active");
+    }
+    if (curpage == "product-play.html") {
+      $(".plt-mtp-egame").attr("data-tag", "new");
+    }
+
+    if (curpage == "product-sports.html" || curpage == "product-cric.html") {
+      $(".plt-mtp-sports").addClass("active");
+    } else {
+      $(".plt-mtp-sports").removeClass("active");
+    }
+    if (curpage == "product-play.html") {
+      $(".plt-mtp-sports").attr("data-tag", "new");
+    }
+    if (curpage == "product-esports.html") {
+      $(".plt-mtp-esports").addClass("active");
+    } else {
+      $(".plt-mtp-esports").removeClass("active");
+    }
+
+    if (curpage == "product-lotto.html") {
+      $(".plt-mtp-lotto").addClass("active").attr("data-tag", "new");
+    } else {
+      $(".plt-mtp-lotto").removeClass("active");
+    }
+
+    // CN
+    if (curpage == "product-sexy.html") {
+            $(".plt-mtp-live b").text("AE 性感百家");
+            console.log('OKOK')
+        }
+        if (curpage == "product-casino.html") {
+            $(".plt-mtp-live b").text("AE 真人娱乐");
+        }
+        if (curpage == "product-live.html") {
+            $(".plt-mtp-live b").text("AE 真人直播");
+        }
+        if (curpage == "product-gaming.html") {
+            $(".plt-mtp-egame b").text("AE 电子游戏");
+        }
+        if (curpage == "product-play.html") {
+            $(".plt-mtp-egame b").text("AE 电娱游戏");
+        }
+        if (curpage == "product-sports.html") {
+            $(".plt-mtp-sports b").text("AE 体育竞技");
+        }
+        if (curpage == "product-cric.html") {
+            $(".plt-mtp-sports b").text("AE 板球交易");
+        }
+        if (curpage == "product-esports.html") {
+            $(".plt-mtp-esports b").text("AE 电竞手游");
+        }
+        if (curpage == "product-lotto.html") {
+            $(".plt-mtp-lotto b").text("AE 彩票游戏");
+        }
+  });
+</script>

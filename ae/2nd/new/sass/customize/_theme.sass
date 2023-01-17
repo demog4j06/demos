@@ -1,0 +1,61 @@
+// 2018-08-02 template theme for tegchnology style.
+// Copyright by Tom Tang.
+// Name rule
+// [Coponemts Name]-[color/bg-color/border-color]--[status]
+
+
+// -----------------------------------------------------------
+// 01.font
+// -----------------------------------------------------------
+$globaol-font: 'PingFangTC', '微軟正黑體', 'Heiti TC','Microsoft JhengHei', '新細明體','細明體','標楷體',Arial,serif   // 
+
+html, body
+    font-size: 100%
+    font-family: $globaol-font
+    background-color: #1f092f
+    input, button, textarea, select
+        font-size: 100%
+        font-family: $globaol-font
+
+// -----------------------------------------------------------
+// 02.color
+// -----------------------------------------------------------
+
+// 主色
+$color-main: #D61518
+$color-green: #129043
+$color-gold: #CEBE88
+// 灰色
+$color-border-gray: #D1D1D1
+$color-light-gray: #EFEFEF
+$color-mid-gray: #B9B9B9
+$color-dark-gray: #8B8B8B
+$color-darkest-gray: #4E4E4E
+// 黑色
+$color-black: #242424
+//連結色
+$color-links: #0C5FCB
+$color-yellow: #FFE42E
+//標籤色
+$color-tags: #B88D00
+
+// 顏色class套用
+.color-main
+    color: $color-main
+.color-link-blue
+    color: $color-links !important
+.color-gold
+    color: $color-gold !important
+.color-green
+    color: $color-green !important
+.color-dark-gray
+    color: $color-dark-gray
+.color-disabled
+    color: $color-dark-gray
+
+// global link
+a
+    color: $color-black
+    cursor: pointer
+    // &:hover
+    //     color: $color-main

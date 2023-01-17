@@ -1,0 +1,47 @@
+#goToTop {
+  width: 62px;
+  height: 62px;
+  background-color: $ae-foot-color;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 45deg);
+  >span {
+		width: 8px;
+		height: 8px;
+		display: block;
+		border: 1px solid #fff;
+		border-bottom-style: none;
+		border-right-style: none;
+		position: absolute;
+		top: 13px;
+		left: 13px;
+		+span {
+			top: 17px;
+			left: 17px;
+		}
+  }
+}
+#contact, #foot {
+  font-weight: 200;
+  background-color: $ae-foot-color;
+}
+#contact{
+  > .btn-box {
+		font-weight: normal;
+		padding-bottom: 30px;
+		position: relative;
+  }
+  h3{
+		color:$text-yellow;
+		text-indent: 0;
+	}
+}
+.contact-marketers{color:$text-yellow;}
+.ae-logos > div{background-image:url("../../img/ae_footer_logo.png");}
+@media screen and (min-width: 1024px) {
+	#contact{
+		h3{font-size: 30px;}
+		p{font-size: 20px;}
+	}
+}

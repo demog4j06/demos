@@ -1,0 +1,570 @@
+// .pageClass-brand
+//     // -------------------------------------- 
+//     // 內頁banner
+//     // -------------------------------------- 
+//     .page-banner
+//         background-image: url("../images/mobile/brand/banner.jpg")
+//         +pad_landscape_up
+//             background-image: url("../images/pc/brand/banner.jpg")
+
+//     // -------------------------------------- 
+//     // 錨點選單
+//     // -------------------------------------- 
+//     .anchor-menu-container
+//         .anchor-menu
+//             li
+//                 width: (100%/3)
+//             li a:hover, li.active a
+//                 color: #f36720
+//                 background-color: #23194b
+            
+//             .icon-timeline
+//                 margin: 0.25rem 0
+//                 +icon("../images/mobile/brand/icon_timeline.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+
+//             a:hover .icon-timeline, li.active a .icon-timeline
+//                 +icon("../images/mobile/brand/icon_timeline_h.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+                
+//             .icon-event
+//                 margin: 0.25rem 0
+//                 +icon("../images/mobile/brand/icon_event.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+
+//             a:hover .icon-event, li.active a .icon-event
+//                 margin: 0.25rem 0
+//                 +icon("../images/mobile/brand/icon_event_h.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+
+//             .icon-social-media
+//                 margin: 0.25rem 0
+//                 +icon("../images/mobile/brand/icon_social_media.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+
+//             a:hover .icon-social-media, li.active a .icon-social-media
+//                 margin: 0.25rem 0
+//                 +icon("../images/mobile/brand/icon_social_media_h.png", 65px*0.5, 65px*0.5)
+//                 display: block
+//                 background-position: 50% 50%
+//                 width: 100%
+
+//         +pad_up
+//             .anchor-menu
+//                 margin: 0 auto
+//                 width: 70%
+//                 li a
+//                     padding: 0.875rem 0
+//                     & > i
+//                         margin: 0.375rem 0 !important
+//                         background-size: 65px*0.8 65px*0.8 !important
+//                         height: 65px*0.8 !important
+
+//         +pad_landscape_up
+//             .anchor-menu
+//                 width: 50%
+//                 li a
+//                     font-size: 1.125rem
+//                     padding: 1rem 0
+//                     & > i
+//                         margin: 0.375rem 0 !important
+//                         background-size: 65px*0.8 65px*0.8 !important
+//                         height: 65px*0.8 !important
+
+//         +desktop_up
+//             .anchor-menu
+//                 width: 40%
+//                 max-width: 550px
+//                 li a
+//                     font-size: 1.125rem
+//                     & > i
+//                         margin: 0.5rem 0 !important
+
+// // -------------------------------------- 
+// // 品牌历程
+// // -------------------------------------- 
+// .pageClass-brand-timeline
+//     .brand-time-line-intro-view
+//         background-image: url("../images/mobile/brand/brand_timeline_bg.jpg")
+//         +bg-rwd(cover)
+//         background-position: center top
+//         background-attachment: fixed
+//         +pad_landscape_up
+//             background-image: url("../images/pc/brand/brand_timeline_bg.jpg")
+//             +bg-rwd(cover)
+//             background-attachment: fixed
+
+//     .timeline-list
+//         li.now, li:hover
+//             .year
+//                 color: #fff
+//                 font-size: 36px
+//             .event .event-title, .event .event-list
+//                 color: #fff
+//             .event:before
+//                 opacity: 1
+//             .event-title
+//                 height: 32px
+//                 background-image: url("../images/mobile/brand/year_bg.png")
+//                 background-size: contain
+//                 background-repeat: no-repeat
+//                 &:before, &:after
+//                     opacity: 1
+//         .year
+//             margin-top: 1rem
+//             margin-bottom: 0.5rem
+//             font-size: 32px 
+//             font-family: 'Times New Roman'
+//             font-style: italic
+//             color: #9a97c7
+//             transition: .2s all ease-in
+//         .event
+//             color: #9a97c7
+//             transition: .3s all ease-in
+//             .event-title
+//                 margin-bottom: 1rem
+//                 padding-left: 1.75rem
+//                 position: relative
+//                 font-size: 17px
+//                 font-weight: bold
+//                 display: flex
+//                 align-items: center
+//                 transition: .3s all ease-in
+//                 &:before, &:after
+//                     content: ""
+//                     display: inline-block
+//                     border-radius: 50%
+//                     opacity: 0.5
+//                     position: absolute
+//                     transition: .2s all ease-in
+//                 &:before
+//                     width: 10px
+//                     height: 10px
+//                     background-color: #fff
+//                     left: 5px
+//                 &:after
+//                     width: 20px
+//                     height: 20px
+//                     background-color: rgba(255,255,255,0.5)
+//                     left: 0
+
+//             .event-list
+//                 margin-left: 1.75rem
+//                 list-style-type: disc
+//                 li
+//                     font-size: 15px
+//                     line-height: 1.5rem
+//                     margin-bottom: 1rem
+//                     transition: .2s all ease-in
+
+//         +pad_up
+//             margin: 4% 0 8% 0
+//             display: flex
+//             justify-content: center
+//             li.now .event
+//                 margin-top: 10px
+//             .year
+//                 margin: 0
+//                 text-align: center
+//                 float: left
+//                 width: 90px
+//             .event
+//                 margin-top: 12px
+//                 position: relative
+//                 float: left
+//                 width: calc(100% - 120px)
+//                 &:before
+//                     display: inline-block
+//                     content: ""
+//                     width: 1px
+//                     height: 73%
+//                     position: absolute
+//                     left: -3rem
+//                     top: 40px
+//                     background-color: #fff
+//                     opacity: 0.5
+
+//         +laptop_up
+//             li.now, li:hover
+//                 .year
+//                     font-size: 56px
+//                     width: 140px
+//                 .event
+//                     margin-top: 18px
+//                     padding-bottom: 5%
+//                     .event-title
+//                         padding-left: 2.25rem
+//                         height: 48px    
+//                         &:before
+//                             left: 6px
+//                             width: 16px
+//                             height: 16px
+//                         &:after
+//                             width: 28px 
+//                             height: 28px
+//             // 調整字型大小
+//             .year
+//                 font-size: 48px
+//                 width: 140px
+//             .event
+//                 width: calc(100% - 140px)
+//                 margin-top: 1.125rem
+//                 margin-bottom: 1rem
+//                 &:before
+//                     height: 65%
+//                     top: 60px
+//                     left: -4.8rem
+//                 .event-title
+//                     font-size: 24px
+//                 .event-list li
+//                     font-size: 16px
+
+//         +desktop_up
+//             li.last
+//                 .event:before
+//                     display: none
+//             li.now, li:hover
+//                 .year
+//                     font-size: 86px
+//                     width: 220px
+//                 .event
+//                     margin-top: 40px
+//                     padding-bottom: 5%
+//                     .event-title
+//                         padding-left: 2.25rem
+//                         height: 48px    
+//                         &:before
+//                             left: 6px
+//                             width: 16px
+//                             height: 16px
+//                         &:after
+//                             width: 28px 
+//                             height: 28px
+//             // 調整字型大小
+//             .year
+//                 font-size: 60px
+//                 width: 220px
+//             .event
+//                 width: calc(100% - 220px)
+//                 margin-top: 20px
+//                 margin-bottom: 1rem
+//                 &:before
+//                     height: 65%
+//                     top: 80px
+//                     left: -15%
+//                 .event-title
+//                     font-size: 1.875rem
+//                     margin-bottom: 1.5rem
+//                 .event-list li
+//                     font-size: 1.125rem
+//                     line-height: 1.875rem
+
+// // -------------------------------------- 
+// // 品牌活动
+// // -------------------------------------- 
+
+// // 列表
+// .pageClass-brand-event-list
+//     .brand-event-list-intro-view
+//         padding-top: 0
+//         background-color: #140e2f
+//         .event-list
+//         li
+//             padding: 2rem 1rem
+//             color: #fff
+//             border-bottom: 1px solid #3a325e
+//             .event-image
+//                 margin: 1rem 0
+//                 padding-bottom: 55vw
+//                 display: block
+//                 +bg-rwd(cover)
+//                 overflow: hidden
+//                 border-radius: 12px
+//                 img
+//                     display: none
+//             h2.event-title
+//                 margin-bottom: 0.5rem
+//                 font-size: 1.125rem
+//                 line-height: 1.8rem
+//                 font-weight: bold
+//                 +text-ignore(2, 1.8rem, 1.8rem*2)
+//             .event-des 
+//                 margin-bottom: 0.875rem
+//                 font-size: 15px
+//                 line-height: 1.875rem
+//                 font-weight: normal
+//                 +text-ignore(3, 1.875rem, 1.875rem*3)
+//             .control-bk
+//                 text-align: center
+
+//     +pad_up
+//         .brand-event-list-intro-view
+//             padding-top: 3rem
+//         .event-list
+//             margin-top: 2rem
+//             li
+//                 display: flex
+//                 align-items: center
+//                 .event-image, .event-text
+//                     margin: 0
+//                     width: 50%
+//                 .event-image
+//                     padding-bottom: 30vw
+//                 .event-text
+//                     padding-left: 1.5rem
+//                 h2.event-title
+//                     margin-bottom: 0.5rem
+//                     font-size: 1.25rem
+//                     line-height: 1.875rem
+//                     +text-ignore(2, 1.875rem, 1.875rem*2)
+//                 .event-des 
+//                     margin-bottom: 1.5rem
+//                 .control-bk
+//                     text-align: left
+
+//     +laptop_up
+//         .brand-event-list-intro-view
+//             padding-top: 4rem
+//         .event-list li .event-text
+//             padding-left: 3.5rem
+
+//     +desktop_hd_up
+//         .event-list
+//             margin: 0 auto
+//             max-width: 1500px
+//         .event-list li
+//             padding: 3rem 1rem
+//         .event-list li .event-image
+//             padding-bottom: 18vw
+//             width: 40%
+//         .event-list li .event-text
+//             width: 60%
+//         .event-list li .event-text h2.event-title
+//             margin-bottom: 1rem
+//             font-size: 1.75rem    
+//             line-height: 2.5rem
+//             +text-ignore(2,2.5rem, 5rem)
+//         .event-list li .event-text .event-des 
+//             margin-bottom: 2rem
+
+// // 內頁
+// .pageClass-brand-event-detail
+//     .brand-event-detail-view
+//         padding-top: 2rem
+//         padding-bottom: 5rem
+//         background-color: #140e2f
+//         .container
+//             max-width: 1500px
+//         .event-title
+//             margin-top: 1rem
+//             margin-bottom: 2rem
+//             padding: 0 1rem
+//             text-align: center
+//             h2
+//                 display: inline-block
+//                 font-size: 1.375rem
+//                 line-height: 2.125rem
+//                 text-align: left
+//                 font-weight: bold
+//                 color: #f36720
+
+//         .editor
+//             margin-bottom: 2rem
+//             padding: 0 1rem
+//             padding-bottom: 2rem
+//             color: #fff
+//             border-bottom: 1px solid #3a325e
+//             img
+//                 margin: 1rem 0
+
+//         +pad_up
+//             padding-bottom: 10%
+//             .event-title
+//                 h2
+//                     font-size: 1.75rem
+//                     line-height: 2.5rem
+
+//         +pad_landscape_up
+//             .article-row
+//                 display: flex
+//                 align-items: center
+//                 & > .section-des
+//                     width: 60%
+//                 & > .img-wrapper
+//                     width: 40%
+//                 &.article-row-2  
+//                     & > .article-section
+//                         width: 58%
+//                     & > .img-wrapper
+//                         width: 42%
+//                 .pd-left
+//                     padding-left: 1.5rem
+//                 .pd-right
+//                     padding-right: 1.5rem
+            
+//         +laptop_up
+//             padding-bottom: 8%
+//             .event-title
+//                 h2
+//                     font-size: 2rem
+//                     line-height: 2.625rem
+
+//             .article-row
+//                 .pd-left
+//                     padding-left: 2.5rem
+//                 .pd-right
+//                     padding-right: 2.5rem
+
+//             .article-row.article-row-2
+//                 .article-section
+//                     .img-wrapper
+//                         padding: 0 6rem 0 4rem
+//                 & > .img-wrapper
+//                     padding: 2rem
+
+//         +desktop_up
+//             .event-title
+//                 margin-top: 2rem
+//                 margin-bottom: 3rem
+//                 h2
+//                     font-size: 2.25rem
+//                     line-height: 3rem
+
+//             .article-row
+//                 &.article-row-2  
+//                     & > .article-section .section-des
+//                         // margin-bottom: 3vw
+// // -------------------------------------- 
+// // 影音及社群
+// // -------------------------------------- 
+
+// .pageClass-brand-social-media
+//     background-image: url("../images/mobile/brand/brand_social_media_bg.jpg")
+//     +bg-rwd(cover)
+//     background-attachment: fixed
+//     +pad_landscape_up
+//         background-image: url("../images/pc/brand/brand_social_media_bg.jpg")
+//         +bg-rwd(cover)
+//         background-attachment: initial
+
+//     // slogan
+//     .section-slogan img
+//         margin: 2% 0
+//         height: 40px
+
+//     .section-slogan-2 img
+//         height: 60px
+    
+//     // video
+//     .video-wrap
+//         margin-bottom: 15%
+//         padding: 0 5%
+//         text-align: center
+//         iframe
+//             width: 100%    
+//             height: 45vw   
+
+//     +pad_up
+//         // slogan
+//         .section-slogan img
+//             height: 55px
+
+//         .section-slogan-2 img
+//             margin: 3% 0
+//             height: 70px
+//         // video
+//         .video-wrap
+//             margin-bottom: 10%
+//             iframe
+//                 width: 80%
+//                 height: 35vw   
+
+//     +laptop_up
+//         // slogan
+//         .section-slogan img
+//             height: 65px
+//         .section-slogan-2 img
+//             margin: 3% 0
+//             height: 90px
+//         // video
+//         .video-wrap
+//             iframe
+//                 height: 38vw
+//     +desktop_up
+//         // slogan
+//         .section-slogan img
+//             margin: 1.25% 0
+//             height: 75px
+
+//         .section-slogan-2 img
+//             margin: 4% 0
+//             height: 150px
+
+//         // video
+//         .video-wrap
+//             iframe
+//                 width: 60%
+//                 height: 28vw
+
+// // ------------------------------------
+// // 多語系設定
+// // ------------------------------------
+// .pageClass-brand-timeline.en,
+// .pageClass-brand-timeline.vn,
+// .pageClass-brand-timeline.th
+
+//     ul.progress-list li 
+//         .text .text-sm
+//             display: none
+//     +pad_up
+//         .anchor-menu-container
+//             ul.anchor-menu
+//                 width: 80%
+
+//     +pad_landscape_up
+//         .anchor-menu-container
+//             ul.anchor-menu
+//                 width: 80%
+
+//     +desktop_up
+//         .anchor-menu-container
+//             ul.anchor-menu
+//                 width: 50%
+//                 max-width: 100%
+
+//     +pad_up
+//         .timeline-list 
+//             .event:before
+//                 left: -3rem
+//     +laptop_up
+//         .timeline-list 
+//             .event:before
+//                 left: -4.8rem
+//     +desktop_up
+//         .timeline-list 
+//             .event:before
+//                 left: -7rem
+//     +desktop_hd_up
+//         .timeline-list 
+//             .event:before
+//                 left: -7rem
+
+// .pageClass-brand.th
+//     .anchor-menu-container
+//         ul.anchor-menu li a
+//             padding: 0.5rem 1rem
+//             height: 100px
+//     +pad_up
+//         .anchor-menu-container
+//             ul.anchor-menu li a
+//                 height: auto

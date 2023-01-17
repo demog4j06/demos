@@ -1,0 +1,152 @@
+// --- 個頁面樣式-包网系统 ---
+.pageClass-product-white-lable
+    // product logo
+    .product-logo.white-lable
+        +icon-new("../images/lang_img/product_logo/ae_white_lable_logo.png", 345px/2, 136px/2)
+        display: block
+        margin: 0 auto
+        +pad_up
+            width: 345px*0.75
+            height: 136px*0.75
+        +laptop_up
+            width: 345px
+            height: 136px
+
+    // 標籤 - 免費試玩
+    .label-free-trail
+        color: #faf704
+        font-size: 0.75rem
+        font-style: normal
+        background-color: #f36720
+        border-radius: 3px
+        padding: 0.125rem 0.25rem
+        margin: 0 0.5rem
+
+    // 包網分類列表
+    .white-lable-categories-list .white-lable-item
+        margin: 5% 0
+        .img-box
+            overflow: hidden
+            padding-bottom: 46%
+            position: relative
+            img
+                +center-all
+                width: 100%
+                display: inline-block
+            .img-box-title
+                color: #fff
+                font-size: 1.25rem
+                font-weight: bold
+                text-align: center
+                +center-bottom
+                width: 100%
+                bottom: 15%
+        .intro-box
+            text-align: center
+            background-color: #30294a
+            padding: 1rem
+            .intro-box-slogan
+                color: #f5851e
+                font-size: 1rem
+                font-weight: bold
+                margin-bottom: 2%
+            .intro-box-features-list li
+                color: #fff
+                font-size: 0.875rem
+        .intro-box-main-feature
+            color: #fecf60
+            font-size: 0.875rem
+            text-align: center
+            background-color: #2b305b
+            padding: 0.5rem 1rem
+            margin: 1rem -1rem -1rem -1rem
+            transition: .3s all ease-in
+
+    +pad_up
+        .product-adventage-intro-block
+            .intro-container-left
+                width: 60%
+            .intro-container-right
+                width: 40%
+        // 包網分類列表
+        .white-lable-categories-list
+            // 改3個一排
+            .white-lable-categories-list-row
+                display: flex
+                width: 100%
+                .white-lable-item
+                    width: (100%/3)
+                    flex: 1
+                    background-color: #30294a
+                    position: relative
+                    margin: 0.5rem
+                    // transition: .3s all ease-in
+                    .intro-box
+                        transition: .3s all ease-in
+                        .intro-box-features-list
+                            margin-bottom: 3.5rem
+                    .img-box
+                        padding-bottom: 80%
+            .white-lable-item
+                .intro-box-main-feature
+                    margin: 0
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                &:hover
+                    box-shadow: 0 4px 16px rgba(0,0,0,0.5)
+                    .intro-box
+                        background-color: #433a63
+                    .intro-box-main-feature
+                        background-color: #3e4478
+                // 中國包網
+                &.white-lable-item-cn
+                    width: calc(100% - 1rem)
+                    display: flex
+                    margin: 0.25rem auto
+                    .img-box, .intro-box
+                        width: 50%
+                    .img-box
+                        flex: 1
+                        padding-bottom: 23%
+                    .intro-box
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        position: relative
+                        .intro-box-features-list
+                            margin-bottom: 2.25rem
+        .button-group
+            margin-top: 2%
+
+    +pad_landscape_up
+        .white-lable-categories-list
+            .white-lable-item .img-box .img-box-title
+                bottom: 2rem
+            .white-lable-item .intro-box-main-feature
+                padding: 1rem 0
+
+    +laptop_up
+        // 包網分類列表
+        .white-lable-categories-list .white-lable-item
+            .img-box .img-box-title
+                font-size: 2rem
+                bottom: 12%
+            .intro-box
+                .intro-box-slogan
+                    font-size: 1.5rem
+                .intro-box-features-list li
+                    font-size: 1.125rem
+                    line-height: 1.875rem
+            .intro-box-main-feature
+                font-size: 1rem
+
+    +desktop_up
+        // 八大理由
+        .product-adventage-intro-block
+            .intro-container-left
+                width: 65%
+            .intro-container-right
+                width: 35%

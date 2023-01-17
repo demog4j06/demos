@@ -1,0 +1,59 @@
+// --- 個頁面樣式-AE真人 ---
+.pageClass-product-ae-cricket
+    // product logo
+    .product-logo.ae-cricket
+        +icon-new("../images/pc/products/cricket/logo.png", 348px/2, 133px/2)
+        display: block
+        margin: 0 auto
+    // adventage list
+    .product-adventage-intro-block .adventage-list li
+        font-weight: bold
+    // video
+    .intro-container-cricket-01
+        margin-bottom: 5%
+        .video-wrap
+            margin: 5% 0
+            iframe
+                width: 100%
+                height: 45vw
+
+    +pad_up
+        .product-logo.ae-cricket
+            width: 348px*0.75
+            height: 133px*0.75
+        .intro-container-cricket-01 .video-wrap iframe
+            height: 32vw
+        .intro-container-cricket-02
+            margin-top: -10%
+            .col-xs-12.col-sm-6.col-sm-pull-6
+                padding-right: 5%
+        .product-adventage-intro-block
+            .adventage-list li
+                text-align: left
+                display: block
+                margin-bottom: 8px
+            .intro-container-left
+                width: 70%
+            .intro-container-right
+                width: 30%
+
+    +pad_landscape_up
+        .intro-container-cricket-01, .intro-container-cricket-02
+            display: flex
+            align-items: center
+            .section-des
+                padding-right: 5%
+
+    +laptop_up
+        .product-logo.ae-cricket
+            width: 348px
+            height: 133px
+        .product-adventage-intro-block .adventage-list li
+            margin-bottom: 20px
+
+    +desktop_up
+        .product-adventage-intro-block .adventage-list li
+            font-size: 26px
+            margin-bottom: 24px
+
+

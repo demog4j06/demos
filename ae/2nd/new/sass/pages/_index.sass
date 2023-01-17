@@ -1,0 +1,361 @@
++pad_up
+    .product-menu-slider
+        > .slick-prev, > .slick-next
+            z-index: 1
+            &:before, &:after
+                content: ""
+                width: 30px
+                height: 2px
+                background-size: 200% 100%
+                position: absolute
+                top: 27px
+                transition: background-position .4s
+        > .slick-prev
+            // color: #f68c1e #f25821 #ee2424 #9093bb
+            &:before, &:after
+                left: 4px
+                transform-origin: 1px 50%;
+                background-position: 100% 0
+            &:before
+                background-image: linear-gradient(90deg, #f68c1e 0%, #f25821 50%, #9093bb 0%)
+                transform: rotate3d(0,0,-1,45deg)
+            &:after
+                background-image: linear-gradient(90deg, #f25821 0%, #ee2424 50%, #9093bb 0%)
+                transform: rotate3d(0,0,1,45deg)
+            &:hover
+                &:before, &:after
+                    background-position: 0 0
+        > .slick-next
+            &:before, &:after
+                right: 4px
+                transform-origin: calc(100% - 1px) 50%
+            &:before
+                background-image: linear-gradient(90deg, #9093bb 50%, #f68c1e 50%, #f25821 100%)
+                transform: rotate3d(0,0,1,45deg)
+            &:after
+                background-image: linear-gradient(90deg, #9093bb 50%, #ee2424 50%, #f25821 100%)
+                transform: rotate3d(0,0,-1,45deg)
+            &:hover
+                &:before, &:after
+                    background-position: 100% 0
++pad_landscape_up
+    .purple-block-sm
+        background-color: #201558
+        border-radius: 12px
+        box-shadow: 0 4px 16px rgba(0,0,0,0.45)
+        padding: 24px 16px
+.homepage
+    &-banner > .slick-dots
+        position: absolute
+        left: 0
+        bottom: 1.5%
+    // --- 關於 AE ---
+    .about-AE
+        background-image: url("../images/mobile/index/index_sec_01_bg.jpg")
+        background-size: cover
+        background-position: center
+        +pad_up
+            .purple-block-sm
+                display: flex
+                align-items: center
+                > div
+                    width: 50%
+                    &:nth-of-type(1)
+                        margin-right: 8px
+                    &:nth-of-type(2)
+                        margin-left: 8px
+        +pad_landscape_up
+            background-image: url("../images/pc/index/index_sec_01_bg.jpg")
+            background-attachment: fixed
+        +laptop_up
+            .purple-block-sm
+                max-width: 1600px
+                margin: auto
+            .section-des
+                padding: 0 32px
+    // --- AE 優勢 ---
+    .ae-adventage
+        background-image: url("../images/mobile/index/index_sec_02_bg.jpg")
+        background-size: cover
+        background-position: center top
+        +pad_up
+            background-image: url("../images/pc/index/index_sec_02_bg.jpg")
+        &-imgWrap
+            border-radius: (12/648*100)+%/(12/338*100)+%
+            overflow: hidden
+            position: relative
+            > img
+                width: 100%
+        &-titleWrap
+            color: #fff
+            text-align: center
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+        &-title
+            font-size: 24px
+            font-weight: bold
+            font-style: italic
+            margin-bottom: 12px
+        .features-list
+            display: flex
+            flex-wrap: wrap
+            margin: 48px 0 32px
+        .feature-item
+            color: #fff
+            text-align: center
+            width: 50%
+            padding: 0 32px
+            &-icon
+                max-width: 120px
+                margin-bottom: 8px
+            &-text
+                font-size: 14px
+                font-weight: bold
+                line-height: 1.3
+                text-align: center
+                width: 100%
+                margin-bottom: 32px
+        &-iframe
+            width: 90%
+            height: 0
+            padding-bottom: (315/560)*90%
+            margin: 0 auto 32px
+            position: relative
+            > iframe
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+        &-btnBox
+            text-align: center
+            margin-bottom: 16px
+        +pad_up
+            &-box
+                display: flex
+                align-items: center
+            &-boxRight
+                width: 58%
+                order: 1
+                padding-left: 8px
+            &-boxLeft
+                width: 42%
+                padding-right: 8px
+            &-imgWrap
+                box-shadow: 0 4px 16px rgba(0,0,0,0.5)
+            .features-list
+                margin: 0
+            .feature-item
+                padding: 16px
+                &-text
+                    font-size: 16px
+                    margin-bottom: 0
+            &-wrap
+                margin-top: 32px
+            &-iframe
+                width: 80%
+                padding-bottom: (315/560)*80%
+        +pad_landscape_up
+            &-boxRight, &-boxLeft
+                width: 50%
+            &-imgWrap, .purple-block-sm
+                width: 105%
+            &-imgWrap
+                position: relative
+                right: 5%
+            &-title
+                font-size: 26px
+            .purple-block-sm
+                width: 105%
+                padding: 36px 24px 12px
+            .feature-item
+                display: flex
+                align-items: center
+                padding: 0 8px 0 0
+                margin-bottom: 24px
+                &-icon
+                    width: 40%
+                    margin-bottom: 0
+                &-text
+                    text-align: left
+                    width: 60%
+                    flex-grow: 1
+                    padding: 0 12px 0 15px
+            &-wrap
+                margin-top: 5%
+        +laptop_up
+            &-box
+                align-items: flex-start
+            &-imgWrap
+                margin-top: 8%
+            &-title
+                font-size: 38px
+                argin-bottom: 10%
+            &-iframe
+                width: 70%
+                padding-bottom: (315/560)*70%
+        +desktop_up
+            &-imgWrap, .purple-block-sm
+                max-height: 360px
+            &-imgWrap
+                display: flex
+                align-items: center
+            .purple-block-sm
+                padding: 7% 6% 3.5%
+            .feature-item-text
+                padding: 0 17px 0 20px
+        +desktop_hd_up
+            &-box
+                max-width: 1600px
+                margin: auto
+            &-iframe
+                width: 60%
+                padding-bottom: (315/560)*60%
+                margin-bottom: 3%
+    // --- AE 產品 ---
+    .ae-production
+        background-size: cover
+        background-image: url("../images/mobile/index/index_sec_03_bg.jpg")
+        background-position: center top
+        .product-menu-slider
+            // display: flex
+            // flex-wrap: wrap
+            margin: 24px 0
+        .productItem
+            width: (100%/3)
+            float: left
+            padding: 0 4px
+            margin-bottom: 4px
+            position: relative
+            // 選單背景 手機版本
+            > .white-lable
+                background-image: url('../images/mobile/index/gameMenu_01.png')
+            > .live
+                background-image: url('../images/mobile/index/gameMenu_02.png')
+            > .lottery
+                background-image: url('../images/mobile/index/gameMenu_03.png')
+            > .cricket
+                background-image: url('../images/mobile/index/gameMenu_04.png')
+            > .gaming
+                background-image: url('../images/mobile/index/gameMenu_05.png')
+            > .esports
+                background-image: url('../images/mobile/index/gameMenu_06.png')
+        .productItem-name
+            color: #fff
+            font-size: 14px
+            font-weight: bold
+            text-shadow: 0 1px 2px #000, 0 2px 4px #000
+            text-align: center
+            line-height: 1.2
+            width: 100%
+            padding: 0 8px
+            position: absolute
+            left: 0
+            bottom: 6%
+        .productItem-inner
+            height: 0
+            padding-bottom: 436/400*100%
+            background-size: 100% 100%
+            text-align: center
+        +pad_up
+            .product-menu-slider
+                padding: 0 30px
+                margin: 32px 0
+                > .slick-dots
+                    bottom: -32px
+                // > .slick-prev, > .slick-next
+                //     &:before
+                //         content: ""
+                //         width: 23px
+                //         height: 42px
+                //         background-size: 100% 100%
+                // > .slick-prev
+                //     &:before
+                //         background-image: url("../images/common/slide_arrow_l.png")
+                //     &:hover:before
+                //         background-image: url("../images/common/slide_arrow_l_h.png")
+                // > .slick-next
+                //     &:before
+                //         background-image: url("../images/common/slide_arrow_r.png")
+                //     &:hover:before
+                //         background-image: url("../images/common/slide_arrow_r_h.png")
+            .productItem
+                width: auto
+                position: relative
+                transform: scale(0.95, 0.95)
+                transition: transform .3s ease-in
+                &:hover
+                    transform: scale(1, 1)
+                .productItem-name
+                    display: none
+                > .white-lable
+                    background-image: url('../images/pc/index/gameMenu_01.png')
+                > .live
+                    background-image: url('../images/pc/index/gameMenu_02.png')
+                > .lottery
+                    background-image: url('../images/pc/index/gameMenu_03.png')
+                // > .cricket
+                //     background-image: url('../images/pc/index/gameMenu_04.png')
+                > .gaming
+                    background-image: url('../images/pc/index/gameMenu_05.png')
+                > .esports
+                    background-image: url('../images/pc/index/gameMenu_06.png')
+        +pad_landscape_up
+            .product-menu-slider
+                margin: 64px 0
+                > .slick-dots
+                    bottom: -48px
+        +laptop_up
+            background-image: url("../images/pc/index/index_sec_03_bg.jpg")
+            .product-menu-slider
+                padding: 0 40px
+    // --- 合作夥伴 ---
+    .ae-partners
+        background-color: #151246
+        .brand-slider-view
+            margin: 4rem 0
+            .brand-slider-list
+                margin: 0 0.5rem
+                display: inline-block
+                +bg-rwd(contain)
+                width: 60px
+                height: 40px
+                img
+                    opacity: 0
+        +pad_up
+            .brand-slider-view
+                margin: 4rem 0
+                .brand-slider-list
+                    margin: 0 1rem
+                    width: 80px
+                    height: 50px
+        +laptop_up
+            .brand-slider-view
+                padding: 5% 0
+                .brand-slider-list
+                    margin: 0 1rem
+                    width: 100px
+                    height: 60px
+        +desktop_up
+            .brand-slider-view
+                margin: 5% auto
+                max-width: 1200px
+    // --- 多國語系設定 AE產品 選單背景pad版本 ---
+    +pad_up
+        &.cn .ae-production .productItem
+            > .cricket
+                background-image: url('../images/lang_img/cn/_page_index/gameMenu_04.png')
+        &.en, &.vn, &.th
+            .ae-production .productItem
+                > .cricket
+                    background-image: url('../images/lang_img/en/_page_index/gameMenu_04.png')
+    +pad_landscape_up
+        &.cn .ae-adventage
+            &-box
+                align-items: flex-start
+            &-imgWrap
+                margin-top: 8%
+
+

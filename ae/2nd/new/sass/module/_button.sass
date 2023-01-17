@@ -1,0 +1,104 @@
+// button - basic style
+.btn, .AEbtn
+    font-size: 16px
+    font-weight: bold
+    // line-height: 40px
+    line-height: 1.375
+    min-width: 130px
+    // height: 40px
+    // display: inline-block
+    border-radius: 40px
+    // box-sizing: border-box
+    // outline: 0
+    // border: 0
+    // cursor: pointer
+    padding: 9px 12px
+    +laptop_up
+        // line-height: 48px
+        min-width: 160px
+        // height: 48px
+        // border-radius: 24px
+        padding: 13px 24px
+    +desktop_hd_up
+        font-size: 20px
+        // line-height: 58px
+        min-width: 200px
+        // height: 58px
+        // border-radius: 29px
+        // padding: 18px 40px
+.btn
+    cursor: pointer
+    border: 0
+    outline: 0
+.AEbtn
+    text-align: center
+    display: inline-block
+    user-select: none
+.btn-sm
+    font-size: 1rem
+    line-height: 42px
+    min-width: auto
+    height: 42px
+    border-radius: 26px
+    padding: 0 2rem
+
+.btn-primary, .AEbtn-primary
+    color: #fff
+    background-color: rgb(250,139,29)
+    background-image: linear-gradient(180deg, rgb(250,139,29) 0%, rgb(210,34,16) 100%)
+    // transition: .3s all ease-in
+    &:hover
+        color: #fff
+        // background-color: rgb(250,139,29)
+        background-image: linear-gradient(180deg, #fac61d 0%, rgb(210,34,16) 100%)
+
+.btn-primary-gold, .AEbtn-primary-gold
+    color: #FFF
+    background-color: $color-gold
+    transition: .3s all ease-in
+    &:hover
+        color: #FFF
+        background-color: #a99a68
+
+.btn-bordered, .AEbtn-bordered
+    color: #fff
+    background-color: transparent
+    border: 1px solid #fff
+    transition: color .3s ease-in, border-color .3s ease-in
+    &:hover, &:active
+        color:  #f36720
+        border-color: #f36720
+    // &.has-error
+    //     color: $color-main
+    //     border-color: $color-main
+
+.btn-bordered-gold
+    border: 1px solid #df9228
+    color: #df9228
+    background-color: transparent
+    transition: .3s all ease-in
+    &:hover, &:active
+        color:  #f36720
+        border: 1px solid #f36720
+
+.button-group
+    > .AEbtn
+        margin-top: 16px
+        margin-bottom: 16px
+        + .AEbtn
+            margin-left: 16px
+        +laptop_up
+            margin-top: 24px
+            margin-bottom: 24px
+            + .AEbtn
+                margin-left: 28px
+    .btn
+        margin-top: 16px
+        margin-bottom: 16px
+        + .btn
+            margin-left: 16px
+        +laptop_up
+            margin-top: 24px
+            margin-bottom: 24px
+            + .btn
+                margin-left: 28px
